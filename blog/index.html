@@ -1,0 +1,12 @@
+---
+layout: page
+---
+
+<h1 id="page-title" class="page-title" style="text-align:center">Blog, Diary, Note</h1>
+<HR>
+
+<div class="entries-{{ page.entries_layout | default: 'list' }}" style="margin-top: 50px">
+    {%- for entry in site.categories.blog-%}
+    {% include entry.html %}
+    {%- endfor -%}
+</div>

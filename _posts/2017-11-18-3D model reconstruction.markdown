@@ -2,6 +2,7 @@
 title: 3D Model Reconstruction
 layout: post
 tag: C++
+categories: works
 ---
 
 Reconstruct a 3D model from a set of photos.

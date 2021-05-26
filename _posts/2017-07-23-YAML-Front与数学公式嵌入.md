@@ -3,6 +3,7 @@ layout: post
 title: “YAML Front与数学公式嵌入”
 tags:
   - jekyll
+categories: blog
 ---
 
 在博客中编辑格式，以及图片方式嵌入latex数学公式的方法

@@ -1,12 +1,15 @@
 ---
 layout: post
 tag: emacs
+categories: blog
 ---
 
+this file is about basic knowledges about Org-Mode,and application,GTD,for example. 
+ 
+official tutorial: <http://home.fnal.gov/~neilsen/notebook/orgExamples/org-examples.html> 
 
-this file is about basic knowledges about Org-Mode,and application,GTD,for example.  
-official tutorial: <http://home.fnal.gov/~neilsen/notebook/orgExamples/org-examples.html>  
-tutorial on CSDN:<http://www.cnblogs.com/qlwy/archive/2012/06/15/2551034.html>  
+tutorial on CSDN:<http://www.cnblogs.com/qlwy/archive/2012/06/15/2551034.html> 
+
 
 {% include toc %}
 
@@ -20,16 +23,16 @@ tutorial on CSDN:<http://www.cnblogs.com/qlwy/archive/2012/06/15/2551034.html>
 
 ## format
 
-"#+TITLE:"  edit tittle  
-\\#+AUTHOR:  
-\\#+EMAIL  
-"*some words*" italic  
-"**some words**" bold  
-"<del>some words</del>" delete line  
-"<sub>some</sub> words\_" \_ \_ underline  
-H<sub>2</sub>  subscript  
-H<sup>2</sup>  superscript  
-`git`   
+"#+TITLE:"  edit title 
+\\#+AUTHOR: 
+\\#+EMAIL 
+"*some words*" italic 
+"**some words**" bold 
+"<del>some words</del>" delete line 
+"<sub>some</sub> words\_" \_ \_ underline 
+H<sub>2</sub>  subscript 
+H<sup>2</sup>  superscript 
+`git` 
 
 
 <a id="orgd7456c8"></a>

@@ -1,6 +1,7 @@
 ---
 layout: post
 tag: python
+categories: blog
 ---
 
 标题灵感来源于一个名为Learn x in y minutes的简明快速编程语言学习网站，同时这篇python的备忘录性质教程我会一直用org-mode维护，也就有了Learn python in Y years.

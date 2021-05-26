@@ -1,6 +1,7 @@
 ---
 layout: post
 tag: C++
+categories: works
 ---
 
 With a set of images from different views of the same scene, this project can reconstruct the depth map and warp images to generate plausible image-based novel views, enable users to navigate between different views of a scene like navigating in front of a completed 3D model. 

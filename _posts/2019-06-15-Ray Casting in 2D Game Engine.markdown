@@ -1,6 +1,7 @@
 ---
 layout: post
 tag: pico-8
+categories: works
 
 ---
 
