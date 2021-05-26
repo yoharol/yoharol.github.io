@@ -1,5 +1,5 @@
 ---
-layout: posts
+layout: single
 title: “YAML Front与数学公式嵌入”
 tags:
   - jekyll

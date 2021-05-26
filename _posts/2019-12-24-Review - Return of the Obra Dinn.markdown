@@ -1,13 +1,8 @@
 ---
 title: Review - Return of the Obra Dinn
-layout: posts
+layout: single
 tag: game review
-
 ---
-
-
-
-## Review: Return of the Obra Dinn
 
 Intellectual gameplay and emotional storytelling always contradict with each other, but not for Lucas Pope’s games. *Return of the Obra Dinn* performs an immersive game experience with solid game mechanics, and also beautifully crafted narratives.
 

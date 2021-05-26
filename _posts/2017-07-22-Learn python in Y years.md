@@ -1,3 +1,8 @@
+---
+layout: single
+tag: python
+---
+
 <div id="table-of-contents">
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
@@ -320,7 +325,7 @@ Theano的使用应该会单独成立Deep Learning学习文档中，不会加入�
 ### Example from Stanford
 
     class Greeter(object):
-
+    
         # Constructor
         def __init__(self, name):
             self.name = name  # Create an instance variable
@@ -381,7 +386,7 @@ Theano的使用应该会单独成立Deep Learning学习文档中，不会加入�
 ## Array math
 
     import numpy as np
-
+    
     x = np.array([1,2],[3,4], dtype = np.float64)
     y = np.empty_like(x)                           # copy
     y = np.array([5,6],[7,8], dtype = np.float64)

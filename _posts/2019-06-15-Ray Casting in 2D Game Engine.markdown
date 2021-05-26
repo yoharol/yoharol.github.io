@@ -1,14 +1,8 @@
 ---
-layout: posts
+layout: single
 tag: pico-8
 
 ---
-
-
-
-## Raycasting Based on 2D Engine
-
-
 
 An experiment about creating a 3D FPS game on 2D pixel engine, for learning raycasting theory and pico-8 both.
 

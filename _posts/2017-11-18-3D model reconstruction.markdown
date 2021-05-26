@@ -1,13 +1,10 @@
 ---
 title: 3D Model Reconstruction
-layout: posts
-description: Reconstruct a 3D model from a set of photos
+layout: single
 tag: C++
 ---
 
-
-
-## 3D Model Reconstruction
+Reconstruct a 3D model from a set of photos.
 
 Github:  <a href="github.com/MitoGame/VisualHull" target="_blank">repository</a>
 

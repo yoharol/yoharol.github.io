@@ -1,3 +1,8 @@
+---
+layout: single
+tag: emacs
+---
+
 <div id="table-of-contents">
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
@@ -94,7 +99,7 @@ plus S:      move the whole tree
 '<s TAB':  
 
     ;;scartch code
-
+    
     1  
 
 c :type, for example:python  

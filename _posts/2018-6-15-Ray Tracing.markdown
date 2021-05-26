@@ -1,16 +1,13 @@
 ---
-layout: posts
-date: 2018-6-15
+layout: single
 tag: C++
 ---
 
 
 
-## Ray Tracing
+A little program to render image based on low-poly scenes from 3dsMax and ray tracing techniques. It can handle reflection and deflection with triangle surface, quadrangle surface and sphere. 
 
 Github:  <a href="https://github.com/MitoGame/RayTracing" target="_blank">repository</a>
-
-A little program to render image based on low-poly scenes from 3dsMax and ray tracing techniques. It can handle reflection and deflection with triangle surface, quadrangle surface and sphere. 
 
 It's an implementation of ray tracing techniques by basic C++, not a real-time project. 
 

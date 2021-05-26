@@ -4,5 +4,11 @@
 
 @charset "utf-8";
 
+$serif      : "Times New Roman", Times, serif;
+$sans-serif : "Times New Roman", Times, serif;
+$link-color : black;
+
+
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
 @import "minimal-mistakes"; // main partials
+

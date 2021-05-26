@@ -1,5 +1,5 @@
 ---
-layout:	 posts
+layout:	 single
 title:	 "Jekyll与Markdown的诸多小BUG记录"
 date:	2017-07-24
 tags:	
