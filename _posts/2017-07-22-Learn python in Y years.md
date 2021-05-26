@@ -4,11 +4,9 @@ tag: python
 categories: blog
 ---
 
-标题灵感来源于一个名为Learn x in y minutes的简明快速编程语言学习网站，同时这篇python的备忘录性质教程我会一直用org-mode维护，也就有了Learn python in Y years.
+标题灵感来源于一个名为Learn x in y minutes的简明快速编程语言学习网站，于是有了这篇python的备忘录性质教程。
 
 {% include toc %}
-
-Theano的使用应该会单独成立Deep Learning学习文档中，不会加入到本文档中来.
 
 # Python Basic
 

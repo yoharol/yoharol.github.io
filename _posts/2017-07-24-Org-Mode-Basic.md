@@ -4,8 +4,10 @@ tag: emacs
 categories: blog
 ---
 
-this file is about basic knowledges about Org-Mode,and application,GTD,for example. 
- 
+This file is about basic knowledges about Org-Mode,and application,GTD,for example. 
+
+
+
 official tutorial: <http://home.fnal.gov/~neilsen/notebook/orgExamples/org-examples.html> 
 
 tutorial on CSDN:<http://www.cnblogs.com/qlwy/archive/2012/06/15/2551034.html> 

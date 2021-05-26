@@ -1,6 +1,6 @@
 ---
 layout: post
-title: “YAML Front与数学公式嵌入”
+title: YAML Front与数学公式嵌入
 tags:
   - jekyll
 categories: blog

@@ -1,0 +1,56 @@
+---
+title: Lost
+subtitle: The Feeling of lost in morden society
+layout: post
+categories: works
+---
+
+A game made in 2 days for GMTK-JAM-2019.
+
+<center style = "font-size:24px">
+    <strong>Role:</strong> Individual developer<br>
+    <strong>Team size:</strong> 3<br>
+    <strong>Project duration:</strong> 24hours<br>
+    </center>
+**What's right**: 
+
+- Built a fun game based on little art skills and time
+- Turned a philosophy thinking into a mini game
+- Art, game mechanic and music worked perfectly together
+- 73rd over 2616 games, 23th for originality
+
+**What's wrong:**
+
+- Worked well with only a few levels, but further level design brought great difficulty
+- Some levels were unnecessary
+
+**Lessons learned**
+
+- Same with 'The Last Drop', I'm good at building original game mechanics, but also means that I have no references for level design. It would help a lot to find a cooperating level designer, or leave more time for level design. 
+- Serious thought from personal experience is best starting point for originality and creativity.
+
+## Abstract
+
+LOST is an unique game I made individually. You can play this game on <a href="https://inamika.itch.io/lost" target="_blank">itch.io</a>, and review comments and feedback on the <a href="https://itch.io/jam/gmtk-2019/rate/460924 " target="_blank">submission page</a>. 
+
+<p class="block">In the game <b>LOST</b>, you will get lost in a tiny world constituted by simple colors and graphics since <b>you can see and control only one thing at a time.</b> Where are you? What can you do? You can control your character, but always hit something out of nowhere or suddenly fall to failure. You can control some objects, but you don't know what they can do until you change the perspective and find something else has been moved. Will you figure out the right path and achieve your destination, which is a door to leave this world like Truman?</p>
+
+<div style="text-align: center"><iframe width="560" height="315" src="https://www.youtube.com/embed/g-bqYW6nGUU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+
+---
+
+## About Design
+
+<div style="text-align: center"><img src="/img/portfolio/lost.png" width="500" /> </div>
+
+  GMTK-JAM 2019 is a 48-hour online game jam. It ended up with 2629 games, which is the biggest game jam on itch.io. For other reasons, I had only one day to complete a game totally by myself, which was a big challenge.
+
+  For the theme *only one*, I used to discuss on philosophy class that most people nowadays lived in depression and mental stress, because there existed a strong limitation on what they saw. Maybe their life could be beautiful but their sight includes only a small part. For example, a worker in assembly-line hammers nails every day. His factory makes the most beautiful cars in the world, but he never knows. He has no sense of achievement at all, being depressed every day, because all he sees is nails and a hammer. 
+
+   I deeply understood this feeling, and I wanted to set up my game based on it. Rapidly I built my game mechanics, which was to combine concrete objects by memory and control them individually, build the whole level by the player itself. 
+
+  To focus on this concept, anything else should be as simple as possible. In that period I was thinking about ‘less is more’. I believed a good game should be clean and neat, without any spare information. I used to write an article as class project about the color style of *Mirror's Edge* and the power of simple colors, which helped me to build the art style of this game. Every level is composed with only two or tree colors and shapes. You will know why most comments appraised this game clean and neat as soon as you start to play the game.
+
+---
+
+  LOST is not the game that I'm most proud of, also not the most popular game I've made I choose it as my major work, because it describes my attitude: express only one concept, originally and compactly. Also, in this experience I learned that serious thought from personal experience is best starting point for an original game. Such premise may not be the final controlling thought , but would greatly contribute the growth of the game to retain originality and creativity.

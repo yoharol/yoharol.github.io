@@ -1,0 +1,39 @@
+---
+layout: post
+title: Turn on the Lights
+categories: works
+---
+
+A 2D pixel horror game made in 4 days for Brackeys Jam.
+
+<center style = "font-size:24px">
+    <strong>Role:</strong> Individual developer<br>
+    <strong>Team size:</strong> 1<br>
+    <strong>Project duration:</strong> 4 days<br>
+    </center>
+
+**What's right**: 
+
+- Used Unity shader to built a unique art style and could be reused for other projects
+- Get lots of positive comments, also YouTube videos uploaded by players 
+- Good game feeling as a pixel-art horror game 
+
+**What's wrong:**
+
+- Bad sound design
+- Had many plans for further development but end up with no progress
+
+**Lessons learned**
+
+- Play-test is important, but play-test by the designer himself is a terrible idea, especially for horror games
+- Long-term projects require iteration, playtest and progress management, but it's really hard for individual development
+
+## Abstract
+
+*Turn on the Lights* is a game made individually in 4 days for Community Jam. It made up to top 20 popular games on itch.io for 3 days. It's is a 2D horror game published on <a href="https://inamika.itch.io/turn-on-the-lights" target="_blank">itch.io</a> with multiple playthrough videos uploaded by players in comments. 
+
+I built a screen tone pixel-art style for this game. The banner of this website is an example rendered with the same shader.
+
+<div style="text-align: center"><img src="/img/portfolio/shader.gif" width="500" /> </div>
+Sounds, program and sprites of this game are all made by myself originally. 
+

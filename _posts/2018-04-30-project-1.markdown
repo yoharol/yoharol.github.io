@@ -1,0 +1,41 @@
+---
+title: Tiny Musician
+layout: post
+categories: works
+---
+
+A digital interactive devices with electrical prototyping platform Arduino.
+
+<center style = "font-size:24px">
+    <strong>Role:</strong> Designer, Programmer<br>
+    <strong>Team size:</strong> 3<br>
+    <strong>Project duration:</strong> 3 months<br>
+    </center>
+
+**What's right**: 
+
+- Physical interaction, cool light effect and fun audio design 
+- Manage the whole creation process, record and edit the display video
+
+**What's wrong:**
+
+- Failed to find a solution for Wi-Fi or WLAN component to enable this toy to be fully playable, must be wired with a bunch of wires
+- The prototype didn't display the most of our design, would be better if me made a digital software prototype
+
+**Lessons learned**
+
+- Learnt programming of electronic devices and interaction with Logic Pro X
+- Teams consisted of students from department of art, science and engineer which allowed me to locate different students' specialism, hone my communication skills across different roles.
+
+## Abstract
+
+**Tiny Musician** is the project I made for the class *digital entertainment design*. The purpose is to design digital interactive devices with electrical prototyping platform Arduino. 
+
+Tiny Misician is a tiny toy ball that you can hold it within one hand and play with it. We add a barometric pressure sensor,  a 3-axis accelerometer  and a LED matrix into it. When you shake it, the ball will show various color effects by accelerometer and LED matrix. When you knead it, you can control the reverb or pitch of  music played by other devices connected to the ball. 
+
+<div style="text-align: center"><iframe width="560" height="315" src="https://www.youtube.com/embed/-j6K9zdrC7Y" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+This little toy is designed as a music controller that kids can play with music directly. Pity we didn't have Bluetooth components, so for our prototype the ball is connected by a bundle of wire that you can't actually freely play it. In demo video, we demonstrate two effects sparately, reverb and pitch, and the LED matrix is placed outside the ball for convenient.
+
+
+Our idea came from toys. Toys are fun to play because they are interactive and enjoyable. Soon a tiny toy ball catched our eyes. Balls are a typical children's toy that kids can play with directly without any educational prerequisits. You can knead it, press it and shake it. So we decided to combine some elctronical hardware inside it, to transform the toy ball into a special controller. 
+

@@ -1,0 +1,58 @@
+---
+title: The Last Drop
+subtitle: A game about the cycle of life
+layout: post
+categories: works
+---
+
+Ludum Dare 44, a teamwork pixel game made in 3 days.
+
+<center style = "font-size:24px">
+    <strong>Role:</strong> Team Leader, Game Designer, Prorammer<br>
+    <strong>Team size:</strong> 7<br>
+    <strong>Project duration:</strong> 3 days<br>
+    </center>
+
+**What's right**: 
+
+- perfectly combined 2 game mechanics with a core concept
+- good project management as both team leader and game designer for the first time
+- 44th over 1817games
+
+**What's wrong:**
+
+- It's hard to consider actual game level when you are focusing on game system design. Leaving little time for level design just because mechanics and concepts felt perfect was a mistake
+
+- Started to communicate with sound designer real late, led to no sound effect in this game.
+
+**Lessons learned**
+
+- Design the whole game system around only one key conception or mechanic, to strengthen the wholeness and the sense of harmony of the game
+- As both game designer and producer, you should also be familiar with other members' specialism to maximize the efficiency and ability of your team
+
+## Abstract
+
+The last Drop is a game made in 3 days for Ludum Dare 44, which ended up 44th over 1817 games. I am the designer, and one of the 3 programmers  responsible for UI program. You can visit the <a href="https://ldjam.com/events/ludum-dare/44/the-last-drop" target="_blank">LD Page</a> to see our rates and feedback, or <a href="https://inamika.itch.io/the-last-drop" target="_blank">itch.io page</a> to play it directly. 
+
+<p class="block">Imagine a lonely water sprite living in a borderless desert... ... Luckily you have the plants to keep you company. However, the plants needs water to grow up, and the only water source is YOUR OWN BODY. What's more, you have to defend your garden from the endless monsters in the night, and your only weapon is also the liquid inside you. How long can you survive, when the only resource is the current inside you?<br>
+
+Plant seeds into the soil, and water them, they will bear fruits in the following days. The fruits can either rehydrate the water sprite or give you permanent buffs. Defeats the monsters in the night to find more seeds.</p>
+
+<div style="text-align: center"><iframe width="560" height="315" src="https://www.youtube.com/embed/xaDxPUkcFxU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+---
+
+## About Design
+
+It was my first time to design and publish a game, which let me gain great confidence to keep participating game jam and making original games from scratch to validate my ideas.
+
+<div style="text-align: center"><img src="/img/portfolio/droprate.png" width="500" /> </div>
+The theme of LD44 was ‘Life is currency’. After the announcement of the theme, I started by asking myself, did I agree that life was currency? Why? After hours of thinking and several papers filled with written concepts, I found an interesting thought that life was always in inevitable circulation. All life experienced birth and death. They fight for their lives, but also the worth of life came from death and creating new life forms. 
+
+Back to the game, the key point was to express this idea to the player via a game experience. In our game, life equals water, and all the elements in our game are related to it. 
+
+I set the game as a lonely survival game, and the main character is the only source of water here. There are monsters seek for water in the dark, and the only way to survive is to plant fruit trees with it's own water, fight with the monsters, use the fruits to get water and other special power,  to bring this wasteland back to life again. To attack and fight with enemies, player consumes water. Players gain seeds by defeating enemies, and use their own water to plant fruit trees. After the trees bear fruits, the player can recover some water by eating fruits or get other buffs. Enemies in the dark are dead trees or bees, seeking water sources and plants. In a nutshell, we built a game as a natural circulatory system, and player's life is the core to manipulate it.
+
+---
+
+This game validate my thinking about ‘single core mechanic’, which is to design the whole game system around only one key conception or mechanic, to strengthen the wholeness and the sense of harmony of the game. The result is a survival game but includes management strategy like Stardew Vally, also a farming simulation game but includes survival and battle elements. By focus on key concept ‘life’, two game systems cooperate and limit each other perfectly, make this game a greatly enjoyable prototype. 
+
