@@ -18,7 +18,7 @@
 skin: "/assets/css/skins/default.css"
 locale: en-US
 title: "Yoharol's Blog"
-description: "Being the best."
+description: "Do something interesting everyday."
 baseurl: # the subpath of your site, e.g. "/blog"
 url: "https://yoharol.github.io"
 logo: "Profile.png"

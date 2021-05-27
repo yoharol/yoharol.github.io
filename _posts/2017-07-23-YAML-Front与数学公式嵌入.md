@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Note: 博客的YAML编写与数学公式嵌入"
+title: "Note: 博客的YAML编写，图片与数学公式嵌入"
 tag: note
 categories: blog
 ---
@@ -44,11 +44,11 @@ YAML作为.md文件开头的页面设置脚本，一般格式为：
 ```
 
 下面以居中格式嵌入一张图片：
-![witch](/images/witch3.jpg){: align-center}
+![pic](/img/Profile.png){: align-center}
 
 源代码：
 ```html
-![witch](/images/witch3.jpg){: align-center}
+![pic](/img/Profile.png){: align-center}
 ```
 注意感叹号不要使用中文输入法，以及网上扒图的时候选择copy location，以及网上找图仍然可能load failed，所以保存到本地Repository再嵌入也是可以的，在Typora中需要输入绝对目录才能读取，但在jekyll网页中，网址就是repository根目录下的相对地址。我的根目录下图片一般保存在images文件夹中，因此是代码中所示的地址.
 
@@ -56,10 +56,13 @@ YAML作为.md文件开头的页面设置脚本，一般格式为：
 
 ## 数学公式的嵌入
 
+**update(2021/05/27): 由于mathjax的引入，数学公式已经可以直接编写和显示。**
+
 .md是支持Latex格式数学公式的（至少在我上使用的Typora中），但jekyll页面无法读取Latex语言。比如如下公式：  
 $ (X^TX)^{-1} X^{-1}\vec Y$  
 在Typora编辑的时候，它直接显示为数学公式，但jekyll页面中会显示为源代码。  
 解决方案是使用latex.codecogs.com，这个网站能直接在网址中添加LaTex公式并输出gif格式的网页，比如上述公式，可以通过如下脚本在jekyll网页中居中显示：
+
 ```html
 ![math1](http://latex.codecogs.com/gif.latex?(X^TX)^{-1} X^{-1}\vec Y){: align-center}
 ```

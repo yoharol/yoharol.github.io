@@ -5,7 +5,7 @@ categories: blog
 title: "Note: Python Basics"
 ---
 
-标题灵感来源于一个名为Learn x in y minutes的简明快速编程语言学习网站，于是有了这篇python的备忘录性质教程。
+备忘录性质python笔记，主要来源于网站Learn X in Y minute, [link](https://learnxinyminutes.com/docs/python/).
 
 {% include toc %}
 
@@ -34,6 +34,7 @@ title: "Note: Python Basics"
     -   "string"[0]='s'
     -   len("string")=6
     -   f"length of {x} is {len(x)}"  **f string**
+    -   "{} is a string".format(x) : **format string**  
 -   NONE  (is an object like NULL in C++)
     -   None is NONE
     -   None, 0, empty strings/lists/dicts/tuples all evaluate to False
@@ -106,6 +107,15 @@ title: "Note: Python Basics"
     -   2 in {1, 2}
     -   est2 = set1.copy()
 
+### Dynamicly construct list, set and dict
+```python
+    [lambda x: x+10 for i in [1, 2, 3]]
+    [x for x in [3, 4, 5, 6, 7] if x > 5]
+    {x for x in 'abcdefg' if x not in 'abc'}
+    {x: x**2 for x in range(5)}
+```
+
+
 ### Mark: copy
 
 For a=b, a is b will give True. For a = b.copy(), a is b will give Flse.
@@ -116,19 +126,48 @@ The operation '==' looks for same **value**, but 'is' looks for same **reference
 
 If we set a = [1, 2], and b=a, then if we change a vlue in a like a[0]=3, b also change because what we did is change original object, not create a new one.
 
-## Control Flow
+### Iterable
+
+An iterable is an object that can be treated as a sequence, but cannot address elemetns by index.
+
+```python
+    new_dict = {"one": 1, "two":2, "three":3}
+    our_iterable = new_dict.keys()
+
+    print(our_iterable)
+    for i in our_iterable:
+        print(i)
+    
+    our_iterator = iter(our_iterable)
+    next(our_iterator) #=> "one"
+    next(out_iterator) #=> "two"
+
+    for i in our_iterator:
+        print(i)
+    
+    list(our_iterable) #=> reuturns ["one", "two", "three"]
+
+```
+
+## Control Flow and Iterables
 
 ### if statement
 
+if : - elif : - else:
+
+```python
     if some_var > 10:
         print "some_var is totally bigger than 10."
     elif some_var < 10:  # This elif clause is optional.
         print "some_var is smaller than 10."
     else:  # This is optional too.
         print "some_var is indeed 10."
+```
+
+for in :
 
 ### for loop
-
+```python
     for animal in ["dog", "cat", "mouse"]:
         # You can use {0} to interpolate formatted strings. (See above.)
         print "{0} is a mammal".format(animal)
@@ -142,31 +181,69 @@ If we set a = [1, 2], and b=a, then if we change a vlue in a like a[0]=3, b also
     for i in range(4, 8):
         print i
     
-    animals = ['cat', 'dog', 'monkey']         #enumerate: get index and item in shape of (a,b)
-    for a,b in enumerate(animals):
-        print "{} amazing {}".format(a,b)
+    animals = ['cat', 'dog', 'monkey']         
+    for a,b in enumerate(animals):           #enumerate: get both index and item in shape of (a,b)
+        print "{}. {} is a kind of animal".format(a,b)
     
     #for in list
     nums = [0, 1, 2, 3, 4]
     squares = [x ** 2 for x in nums if x % 2 == 0]
     print squares   # Prints [0, 1, 4, 9, 16]
+```
 
 ### while loop
 
+```python
     x = 0
     while x < 4:
         print x
         x += 1  # Shorthand for x = x + 1
+```
+
+### Handle exceptions with try/except
+
+```python
+    try:
+        raise IndexError("This is an index error")  # raise: bring up a error manually
+    except IndexError as e:
+        pass # what to do if the exception is catched
+    except (TypeError, NameError): #multiple exceptions can be handled together
+        pass
+    else:
+        print("No exception, all good!")
+    finally: # exception found or not, codes in finally will always be excuted
+        print("we can clean up resources here")
+
+```
+
+### File Operation
+
+```python
+    with open("myfile.txt") as f:
+        for line in f:
+            print(line)
+    
+    contents = {"aa":12, "bb":21}
+    with open("myfile1.txt", "w+") as file:
+        file.write(str(contents))
+    
+    with open('myfile1.txt', "r+") as file:
+        contents = file.read()
+    
+```
 
 ## Functions
 
 ### creat new functions
 
+```python
     def add(x, y):
         print "x is {0} and y is {1}".format(x, y)
         return x + y  # Return values with a return statement
     
     add(5,6)
+
+    add(y=6, x=5)
     
     def add(x,y=6)
         ...         #optional keyword argument
@@ -177,7 +254,7 @@ If we set a = [1, 2], and b=a, then if we change a vlue in a like a[0]=3, b also
     
     varargs(1, 2, 3)  # => (1, 2, 3)
     
-    def all_the_args(*args, **kwargs):
+    def all_the_args(*args, **kwargs):   # positional argumanets, keywords arguments
         print args
         print kwargs
     
@@ -203,20 +280,50 @@ If we set a = [1, 2], and b=a, then if we change a vlue in a like a[0]=3, b also
     
     add_10 = create_adder(10)
     add_10(3)  # => 13
+```
+
+### Lambda expression
+
+Lambda expression is anonymous function, a function that has no name.
+
+For usage, lambda expression can set up a 'abbreviate function'.
+
+format: lambda parameter: expression
+
+```python
+    (lambda x: x>2)(3)    # => True
+    (lambda x, y: x ** 2 + y ** 2)(2, 1)    # =>5
+
+    list(filter(lambda x:x>5, [3, 4, 5, 6, 7]))  #=> [6,7]
+    list(map(lambda x: x+10, [1, 2, 3])) #=> [11, 12, 13]
+```
+
+### Modules
+
+```python
+    import math
+    print(math.sqrt(16))
+    
+    from math import ceil
+    print(ceil(3.7))
+
+    import math as m
+    print(m.sqrt(16))
+
+    dir(math) # find out which functions and atrributes are defined in a module
+```
 
 ## Classes
 
 ### Example from LXYM
 
+```python
     # an example of class below
-    class Human(object):
+    class Human:
         # A class attribute. It is shared by all instances of this class
         species = "H. sapiens"
     
-        # Basic initializer, this is called when this class is instantiated.
-        # Note that the double leading and trailing underscores denote objects
-        # or attributes that are used by python but that live in user-controlled
-        # namespaces. You should not invent such names on your own.
+        # Basic initializer, called when this class is instantiated.
         def __init__(self, name):
             # Assign the argument to the instance's name attribute
             self.name = name
@@ -224,7 +331,7 @@ If we set a = [1, 2], and b=a, then if we change a vlue in a like a[0]=3, b also
             # Initialize property
             self.age = 0
     
-        # An instance method. All methods take "self" as the first argument
+        # All methods take "self" as the first argument
         def say(self, msg):
             return "{0}: {1}".format(self.name, msg)
     
@@ -241,12 +348,12 @@ If we set a = [1, 2], and b=a, then if we change a vlue in a like a[0]=3, b also
     
         # A property is just like a getter.
         # It turns the method age() into an read-only attribute
-        # of the same name.
+        # setter and deleter is defined based on this
         @property
         def age(self):
             return self._age
     
-        # This allows the property to be set
+        # This allows the property to be set,
         @age.setter
         def age(self, age):
             self._age = age
@@ -284,9 +391,11 @@ If we set a = [1, 2], and b=a, then if we change a vlue in a like a[0]=3, b also
     # Delete the property
     del i.age
     i.age  # => raises an AttributeError
+```
 
 ### Example from Stanford
 
+```python
     class Greeter(object):
     
         # Constructor
@@ -305,11 +414,12 @@ If we set a = [1, 2], and b=a, then if we change a vlue in a like a[0]=3, b also
     g.greet(loud=True)   # Call an instance method; prints "HELLO, FRED!"
     
     # g equals to self in Greeter __init__ , and when define a class variate, __init__ will be called automatically
+```
 
 # Numpy
 
 ## creat numpy
-
+```python
     import numpy as py
     a = np.array([1,2,3])
     a = np.array([1,2,3], dtype = float)      # define data type;
@@ -336,9 +446,10 @@ If we set a = [1, 2], and b=a, then if we change a vlue in a like a[0]=3, b also
                          #          [ True  True]]"
     print a[bool_idx]    #          [3 4 5 6]   use boolean array indexing to construct a rank 1 array
     print a[(a>2)]       #equal
+```
 
 ## Array math
-
+```python
     import numpy as np
     
     x = np.array([1,2],[3,4], dtype = np.float64)
@@ -382,9 +493,10 @@ If we set a = [1, 2], and b=a, then if we change a vlue in a like a[0]=3, b also
     
     v[1] = 10
     print v, vv                     #vv will change also
+```
 
 ## Broadcasting
-
+```python
     x = np.array([[1,2,3], [4,5,6], [7,8,9], [10, 11, 12]])
     v = np.array([1, 0, 1])
     y = np.empty_like(x)   # Create an empty matrix with the same shape as x
@@ -400,4 +512,4 @@ If we set a = [1, 2], and b=a, then if we change a vlue in a like a[0]=3, b also
     v = np.array([1, 2, 3])
     w = np.array([4, 5])
     print np.reshape(v, (3, 1))*w
-
+```
