@@ -3,6 +3,7 @@ layout: post
 tag: note
 categories: blog
 title: "Note: Taichi"
+mathjax: true
 ---
 
 Taichi is a high-performance language for computer graphics, and the creator of Taichi set up a tutorial course for it. This post is a record of some easy implementation by myself.
@@ -61,13 +62,20 @@ for i in range(1000000):
 
 **Math operations:**
 
+```python
 ti.(sin, cos, asin, acos, atan2(x, y), cast(x, data_type), sqrt, floor, ceil, inv, tan, tanh, exp, log, random(data_type))
 
 abs, int, float, max(x, y, ...), min(x, y, ...), x**y, x/b, x//b
+```
 
 **Matrix operations:**
 
-Differentiate element-wise product * and matrix product @.
+Differentiate element-wise product \* and matrix product @.
+
+```python
+A*B
+
+A@B
 
 A.(transpose, inverse, trace, determinant(type), normalized, cast(type))
 
@@ -75,10 +83,11 @@ R, S = ti.polar_decompose(A, ti.f32)
 U, sigma, V = ti.svd(A, ti.f32) # sigma is a 3*3 diagonal matrix
 
 ti.sin(A)/cos(A) #element-wise
+```
 
 **Note: polar decomposition**
 
-A matrix $A\in \mathbb{C}^{mn}$ with $m>n$, polar decomposition is a factorization $A=UH$ where $U\in \mathbb{C}^{mn}$ has orthonormal columns and $H\in\mathbb{nn}$ is Hermitian positive semidefinite. This composition is a generalization of the polar representation $z=re^{i\theta}$ of a complex number, where $H$ corresponds to $r\geq 0$ and $U$ to $e^{i\theta}$. When A is real, H is symmetrix positive semidefinite. When m=n, U is a square unitary matrix.
+A matrix $A\in \mathbb{C}^{m\times n}$ with $m>n$, polar decomposition is a factorization $A=UH$ where $U\in \mathbb{C}^{m\times n}$ has orthonormal columns and $H\in\mathbb{n\times n}$ is Hermitian positive semidefinite. This composition is a generalization of the polar representation $z=re^{i\theta}$ of a complex number, where $H$ corresponds to $r\geq 0$ and $U$ to $e^{i\theta}$. When A is real, H is symmetrix positive semidefinite. When m=n, U is a square unitary matrix.
 
 **Note: Singular Value Decomposition**
 
