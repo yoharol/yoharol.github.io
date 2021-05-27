@@ -3,6 +3,7 @@ layout: post
 title: "Note: 博客的YAML编写，图片与数学公式嵌入"
 tag: note
 categories: blog
+mathjax: true
 ---
 
 在博客中编辑格式，以及图片方式嵌入latex数学公式的方法

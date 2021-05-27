@@ -6,25 +6,31 @@ title: "Note: Taichi"
 mathjax: true
 ---
 
-Taichi is a high-performance language for computer graphics, and the creator of Taichi set up a tutorial course for it. This post is a record of some easy implementation by myself.
+Taichi is a high-performance language for computer graphics, and the creator of Taichi set up a tutorial course for it. This post is a record of some simple notes of Taichi.
 
 # Tutorial program explained
 
 ```python
 import taichi as ti
 
-ti.init(arch=ti.cuda)        #arch=ti.cpu, ti.gpu, ti.cuda, ti.opengl
+ti.init(arch=ti.cuda)        
+#arch=ti.cpu, ti.gpu, ti.cuda, ti.opengl
 
 n = 320
 pixels = ti.field(dtype=float, shape=(n*2, n))
-# a = ti.var(dt=ti.f32, shape=(42, 63)) # tensor of 42*63 scalars
-# b = ti.Vector(3, dt=ti.f32, shape=4) # tensor of 4 * 3D vectors
-# c = ti.Matrix(2, 2, dt=ti.f32, shape=(3, 5)) # tensor of 3*5 2*2 matrices
-# loss = ti.var(dt=ti.f32, shape=()) # (0-D) tensor which is a single scalar
+# a = ti.field(dt=ti.f32, shape=(42, 63)) 
+# tensor of 42*63 scalars
+# b = ti.Vector.field(3, dt=ti.f32, shape=4) 
+# tensor of 4 * 3D vectors
+# c = ti.Matrix.field(2, 2, dt=ti.f32, shape=(3, 5)) 
+# tensor of 3*5 2*2 matrices
+# loss = ti.var(dt=ti.f32, shape=()) 
+# (0-D) tensor which is a single scalar
 # b[2] = [3, 4, 5]
 # loss[None] = 3
 
-# ti.Matrix can only be used for small matrix like 4*4. Large matrix should be used as 2D tensor of scalars
+# ti.Matrix can only be used for small matrix like 4*4
+#Large matrix should be used as 2D tensor of scalars
 # ti.Vector is the same as ti.Matrix but has only one column.
 
 # Now all var, vector and matrix is updated to field
@@ -35,12 +41,17 @@ pixels = ti.field(dtype=float, shape=(n*2, n))
 @ti.func
 def complex_sqr(z):
     return ti.Vector([z[0]**2-z[1]**2, z[1]*z[0]*2])
+    # In taichi scope you can declear a vector 
+    # by passing parameters as a list
 
-# Taichi kernel, complied just-in-time, statically-typed, lexically-scoped, parallel and differentiable
+# Taichi kernel, complied just-in-time, statically-typed
+# lexically-scoped, parallel and differentiable
 # Kernel arguments and return values must be type-hinted
+# Kernel can't be called by kernel
 @ti.kernel
 def paint(t: float):
-    for i, j in pixels:
+    for i, j in pixels:    # automatically parallelized for all i, j
+    #struct-for loop, iterate over all tensor coordinates
         c = ti.Vector([-0.8, ti.cos(t)*0.2])
         z = ti.Vector([i/n-1, j/n-0.5]) * 2
         iterations = 0
@@ -54,6 +65,8 @@ gui = ti.GUI("Julia Set", res=(n*2, n))
 
 for i in range(1000000):
     paint(i*0.03)
+    # Launch kernels. After this, tensors can only be accessed
+    # Any allocation is not allowed after first launch
     gui.set_image(pixels)
     gui.show()
 ```
@@ -63,7 +76,8 @@ for i in range(1000000):
 **Math operations:**
 
 ```python
-ti.(sin, cos, asin, acos, atan2(x, y), cast(x, data_type), sqrt, floor, ceil, inv, tan, tanh, exp, log, random(data_type))
+ti.(sin, cos, asin, acos, atan2(x, y), cast(x, data_type))
+ti.(sqrt, floor, ceil, inv, tan, tanh, exp, log, random(data_type))
 
 abs, int, float, max(x, y, ...), min(x, y, ...), x**y, x/b, x//b
 ```
@@ -94,3 +108,48 @@ A matrix $A\in \mathbb{C}^{m\times n}$ with $m>n$, polar decomposition is a fact
 TODO
 
 # Parallel for-loops
+
+For loops in Taichi have two forms:
+
+-   **Range-for loops**, automatically **parallelized** when used at the outermost scope.
+-   **Struct-for loops**, iterates over (sparse) tensor elements.
+
+## Atomic operations
+
+An atomic operation is an operation that will always be executed **without any other process being able to read or change state** that is read or changed during the operation
+
+```python
+total = ti.field(dt = ti.f32, shape = ())
+
+@ti.kernel
+def sum():
+    for i in x:
+        # Approach 1
+        total[None] += x[i]
+        # Correct, Automatically atomic
+
+        #Approach 2
+        ti.atomic_add(total[None], x[i])
+        # Correct
+
+        #Approach 3
+        total[None] = total[None] + x[i]
+        # Wrong, not atomic, may cause error in parralized calculation
+```
+
+# Phases of a Taichi Program
+
+-   Initialization: *ti.init(...)*
+-   Tensor allocation: *ti.field, ti.Vector.field, ti.Matrix.field*
+-   Computation (launch kernels, access tensors in Python-scope)
+-   Optional: restart the Taichi system (clear memory, destory all variables and kernels): ti.reset()
+
+For now, **after the first kernel launch or tensor access in Python-scope, no more tensor allocation is allowed**.
+
+# Debug Mod
+
+```python
+ti.init(debug = True, arch = ti.cpu)
+```
+
+CPU only, much slower.
