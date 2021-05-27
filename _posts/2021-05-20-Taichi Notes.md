@@ -2,7 +2,7 @@
 layout: post
 tag: note
 categories: blog
-title: "Note: Taichi3"
+title: "Note: Taichi"
 mathjax: true
 ---
 
