@@ -1,5 +1,6 @@
 ---
-title: Lost
+title: "Game: Lost"
+tag: game
 subtitle: The Feeling of lost in morden society
 layout: post
 categories: works

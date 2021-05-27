@@ -1,7 +1,7 @@
 ---
-title: 3D Model Reconstruction
+title: "Coding:	3D Model Reconstruction"
 layout: post
-tag: C++
+tag: coding
 categories: works
 ---
 

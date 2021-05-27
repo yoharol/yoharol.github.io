@@ -1,7 +1,8 @@
 ---
 title: Posts Archive
-layout: categories
-permalink: /categories/
+layout: tags
+permalink: /tags/
 show_excerpts: true
 entries_layout: list
 ---
+

@@ -1,7 +1,8 @@
 ---
 layout: post
-tag: emacs
+tag: note
 categories: blog
+title:	"Note: Org-Mode Basics"
 ---
 
 This file is about basic knowledges about Org-Mode,and application,GTD,for example. 

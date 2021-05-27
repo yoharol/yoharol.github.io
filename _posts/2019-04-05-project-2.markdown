@@ -1,8 +1,9 @@
 ---
-title: The Last Drop
+title: "Game: The Last Drop"
 subtitle: A game about the cycle of life
 layout: post
 categories: works
+tag: design
 ---
 
 Ludum Dare 44, a teamwork pixel game made in 3 days.

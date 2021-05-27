@@ -1,7 +1,8 @@
 ---
-title: Tiny Musician
+title: "Design: Tiny Musician"
 layout: post
 categories: works
+tag: design
 ---
 
 A digital interactive devices with electrical prototyping platform Arduino.

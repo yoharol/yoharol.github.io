@@ -1,8 +1,7 @@
 ---
 layout: post
-title: YAML Front与数学公式嵌入
-tags:
-  - jekyll
+title: "Note: 博客的YAML编写与数学公式嵌入"
+tag: note
 categories: blog
 ---
 
@@ -17,6 +16,7 @@ YAML作为.md文件开头的页面设置脚本，一般格式为：
 - layout:post 页面使用post格式
 - tltle: " " 标题
 - tags: - ... tag标注
+- categories: 定义这篇博客的类型
 
 当需要加入table of content时，插入以下语句：
 ```
@@ -26,6 +26,8 @@ YAML作为.md文件开头的页面设置脚本，一般格式为：
 还有其他设置，目前实用的是如上几个，其中tags后面跟着tag列表.  
 需要注意的是，每个冒号后面最好跟上一个TAB符，否则容易遇到识别错误。  
 当然，省去YAML并不影响以post格式正常上传博客.
+
+所有博客都可以根据categories类型进行分类，本博客目前分blog、works，将来根据需求可能会细分diary等门类。实现单独分类页面的方法是创建文件夹/works/index.html，然后修改_data/navigation.yml即可。
 
 ## Image图片嵌入
 在jekyll中，.md格式文件可以嵌入网页图片，格式如下：

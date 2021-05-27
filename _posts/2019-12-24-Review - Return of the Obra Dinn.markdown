@@ -1,7 +1,7 @@
 ---
-title: Review - Return of the Obra Dinn
+title: "Review: Return of the Obra Dinn"
 layout: post
-tag: game review
+tag: review
 categories: blog
 ---
 

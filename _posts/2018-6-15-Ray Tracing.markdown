@@ -1,7 +1,8 @@
 ---
 layout: post
-tag: C++
+tag: coding
 categories: works
+title: "Coding: Simple Ray Tracing"
 ---
 
 

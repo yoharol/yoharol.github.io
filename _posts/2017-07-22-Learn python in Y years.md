@@ -1,7 +1,8 @@
 ---
 layout: post
-tag: python
+tag: note
 categories: blog
+title: "Note: Python Basics"
 ---
 
 标题灵感来源于一个名为Learn x in y minutes的简明快速编程语言学习网站，于是有了这篇python的备忘录性质教程。
@@ -10,74 +11,110 @@ categories: blog
 
 # Python Basic
 
-## 基本数据类型
+## Basic data type
 
--   1            -> 2<3<4
-    -   **5//3      :** =1    integer division
-    -   5%3
-    -   **5\*\*3      :** 5<sup>3</sup>
--   1.0
+-   1, 1.0            -> +-\*/
+    -   5//3      : =1    integer division **rounds down**
+    -   5%3       : =1    **modulo** operation
+    -   5\*\*3    : =125  **exponentiation**(5 to the 3th power)
+    -   5/1 : = 5.0 the result of division is **always a float**
 -   True,False   -> and , or , not
+	- 0==False, 1==True
+	- 2!=True
+	- True + True == 2
+	- True and False are **actually 1 and 0** but with different keywords
+	- bool(5)==true      **bool()** truns integers to True/False
+	- 5 or 0 == -5       **bitwises** treat numbers equally
+	- b is a      ->  **same as b==a**
 -   "This is a string"
-    -   "strinG a"+"string b"
+    -   'This is also a string'
+    -   "string a"+"string b"
+    -   "string a" "string b" **auto connect**
     -   "string"\*3
-    -   "string"[0]
-    -   len("string")
-    -   z = "The items in the basket are %s and %s" % (x, y)
-    -   "{} is a {}".format("This", "placeholder")
-    -   print z.center(20)              ::rjust,center, padding with spaces defined by number
--   NONE  (refer to NULL in C++)
+    -   "string"[0]='s'
+    -   len("string")=6
+    -   f"length of {x} is {len(x)}"  **f string**
+-   NONE  (is an object like NULL in C++)
     -   None is NONE
--   type(x)
-    -   print type(x)
+    -   None, 0, empty strings/lists/dicts/tuples all evaluate to False
+    -   bool({}) == False
+-   print(x)
+    -   print(x) automaticly add new line
+    -   print(x, end="!") no newline
+    -   x=input("Enter some data:") returns data **as string**
+-   "Yay" if 0 > 1 else "Nah"
 
-## 变量
+## Data Structure
 
--   print "string"
--   **print x,y,z,          :** x y z
--   x = input("Enter a string")
-    -   enter: string
-    -   error
-    -   enter: "string"
-    -   x = "string"
--   **x.replace('t','b')     :** replace 't' with 'b'
--   unassigned<sub>var</sub>
-    -   error
--   "" if a>b else ""
--   **lisT = [1,2,3]         :** list
-    -   lisT.append(4)
-    -   lisT.pop()
-    -   lisT[0]
-    -   **list[1:100:5]          :** li[start:end:step]
-    -   **del lisT[2]            :** remove lisT[2]
-    -   **lisT.remove(2)         :** remove 2  (compared to del)
-    -   lisTa + lisTb
-    -   **LisT.insert(1,5)       :** put 5 on index 1
-    -   **lisT.extend(b)         :** = lisT+b
-    -   **lisT.index(2)          :** return index of 2
-    -   **1 in lisT              :** True or False
+-   li = [1,2,3]
+    -   li.append(4)
+    -   li.pop() remove and show the last
+    -   li[0]
+    -   li[1:3] return list from index 1 to 3
+    -   li[1:] return list starting from index 1
+    -   li[1:100:5]          **li[start:end:step]**
+    -   li[::5] pick every fifth entry
+    -   li[::-1] return list in reverse order
+    -   li2 = li[:] copy list
+    -   li2 is li **always false**
+    -   del li[2]             : remove li[2]
+    -   li.remove(2)         : remove **first occurence of value 2**
+    -   lia + lib
+    -   li.insert(1,5)       : put 5 on index 1
+    -   li.extend(b)         : = lisT+b
+    -   li.index(2)          : return **index of first occurence of value 2**
+    -   1 in li              : True or False
     -   len(lisT)
--   a, b, c = 1, 2, 3
--   a, b, c = d, b, a
--   **dict = {"one" : 1, "two" : 2, "three" : 3}  :** dictionary
-    -   **dict["one"]            :** 1
-    -   **dict.keys()            :** ["one","two","three"]
-    -   **dict.values()          :** [1,2,3]
-    -   **dict.items()           :** [("one",1), ("two",2), ("three",3)]
-    -   **"one" in dict          :** True
-    -   **1 in dict              :** False
-    -   dict["four"] = 4
+-   tup = (1,2,3) : tuples are like lists but are **immutable**(unable to change)
+	-   A tuple of length one has to have a comma after the last element
+	-   type((1)) : int
+	-   type((1,)) : tuple
+	-   typle(()) : tuple
+	-   len(tup)
+	-   tup + (4,5,6)
+	-   tup[:2]
+	-   2 in tup
+-   a, b, c = (1, 2, 3)
+-   a, \*b, c = (1, 2, 3, 4) : b=[2, 3]
+-   a, b = b, a : swap a and b
+-   dict = {"one" : 1, "two" : 2, "three" : 3}
+    -   dict["one"]            : 1
+    -   list(dict.keys())      : ["one","two","three"]
+    -   list(dict.values())    : [1,2,3]
+    -   "one" in dict          : True
+    -   1 in dict              : False(**only check keys**)
+    -   dict.get("one")  : 1
+    -   dict.get("four") : None
+    -   dict.get("four", 4) : 4 is a default value in case the key is missing
+    -   dict.setdefault("four", 4) : inserts only if "four" isn't present
+    -   dict.update({"four":4}) : adding
+    -   dict["four"] = 4 : adding
+    -   del dict["four"] : remove the key "four" form dict
 -   est = set()
-    -   **est = set([1,2,3,2])   :** est={1,2,3}
-    -   **est = set([3,2,1,2])   :** est={1,2,3}  sorted
-    -   **est.add(5)             :** est={1,2,3,5}
-    -   **ets = {1,2,3,2,6}      :** ets={1,2,3,6}
-    -   **ets & est              :** {1,2,3}
-    -   **ets&brvbar;est                :** {1,2,3,5,6}
-    -   **ets - est              :** {6}
-    -   **ets ^ est              :** {5,6}   find differences
-    -   **2 in set               :** True
-    -   **print len(est)         :** 4
+    -   est = {1, 1, 2, 3, 4, 4}
+    -   est = {(1,), 1}
+    -   est = {[1, 2], 1}  : Wrong, element of set has to be immutable
+    -   est = est2
+    -   est.add(5)
+    -   est2 = {2, 4, 5}
+    -   {1, 2, 3, 4} & {2, 3, 5}  : ={2, 3} 交集
+    -   {1, 2, 3, 4} \| {2, 3, 5} : = {1, 2, 3, 4, 5} 并集
+    -   {1, 2, 3, 4} - {2, 3, 5} : = {1, 4} 
+    -   {1, 2, 3, 4} ^ {2, 3, 5} : = {1, 4, 5} 并集减交集
+    -   {1, 2} >= {1, 2, 3} : true
+    -   {1, 2} <= {1, 2, 3} : false
+    -   2 in {1, 2}
+    -   est2 = set1.copy()
+
+### Mark: copy
+
+For a=b, a is b will give True. For a = b.copy(), a is b will give Flse.
+
+When we set a=b, they are actually **reference to the same object**. if we change value of a like a = {3, 4}, we **create a new object {3, 4} and then set a refer to this new object**, so value of b won't change.
+
+The operation '==' looks for same **value**, but 'is' looks for same **reference**.
+
+If we set a = [1, 2], and b=a, then if we change a vlue in a like a[0]=3, b also change because what we did is change original object, not create a new one.
 
 ## Control Flow
 

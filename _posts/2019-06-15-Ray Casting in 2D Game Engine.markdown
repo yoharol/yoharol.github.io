@@ -1,7 +1,8 @@
 ---
 layout: post
-tag: pico-8
 categories: works
+title:	"Coding: Ray Casting in 2D pixel game engine"
+tag: coding
 
 ---
 

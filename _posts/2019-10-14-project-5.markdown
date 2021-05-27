@@ -1,7 +1,8 @@
 ---
 layout: post
-title: Turn on the Lights
+title: "Game: Turn on the Lights"
 categories: works
+tag: game
 ---
 
 A 2D pixel horror game made in 4 days for Brackeys Jam.
