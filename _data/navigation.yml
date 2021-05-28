@@ -4,7 +4,9 @@
   url: /
 - title: Blog
   url: /blog/
-- title: Works
+- title: Research
+  url: /research/
+- title: Projects
   url: /works/
 - title: All Posts
   url: /tags/

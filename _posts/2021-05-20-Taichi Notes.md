@@ -153,3 +153,13 @@ ti.init(debug = True, arch = ti.cpu)
 ```
 
 CPU only, much slower.
+
+# Export Mp4 and GIF
+
+```python
+ti.imwrite(img, filename)
+ti video -f 24
+ti video -f 60
+ti gif -i input.mp4
+```
+

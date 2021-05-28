@@ -13,3 +13,4 @@ Be the most interesting one.
 
 Repetation is the mother of learning.
 
+Know what you're doing, keep that in mind all the time.
