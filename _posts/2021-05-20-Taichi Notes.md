@@ -18,13 +18,13 @@ ti.init(arch=ti.cuda)
 
 n = 320
 pixels = ti.field(dtype=float, shape=(n*2, n))
-# a = ti.field(dt=ti.f32, shape=(42, 63)) 
+# a = ti.field(dtype=ti.f32, shape=(42, 63)) 
 # tensor of 42*63 scalars
-# b = ti.Vector.field(3, dt=ti.f32, shape=4) 
+# b = ti.Vector.field(3, dtype=ti.f32, shape=4) 
 # tensor of 4 * 3D vectors
-# c = ti.Matrix.field(2, 2, dt=ti.f32, shape=(3, 5)) 
+# c = ti.Matrix.field(2, 2, dtype=ti.f32, shape=(3, 5)) 
 # tensor of 3*5 2*2 matrices
-# loss = ti.var(dt=ti.f32, shape=()) 
+# loss = ti.var(dtype=ti.f32, shape=()) 
 # (0-D) tensor which is a single scalar
 # b[2] = [3, 4, 5]
 # loss[None] = 3
