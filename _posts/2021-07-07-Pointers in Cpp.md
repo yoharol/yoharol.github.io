@@ -19,7 +19,7 @@ std::cout << "address of class is " << &b << " and value in this address is " <<
 
 Pointer is a more "raw" variable, it's a variable that stores address in it. So **a pointer is equal to the address of a variable**.
 
-```C++
+```c++
 int* pointer_int = &a;
 std::cout << "address of variable is " << pointer_int << " and value in this address is " << *pointer_int << std::endl;
 TestClass* pointer_class = &b;
@@ -28,7 +28,7 @@ std::cout << "address of class is " << pointer_class << " and value in this addr
 
 By pointer, we can better understanding array in C++. When we clarify an array of length n, we actually clarify successive n addresses and create a pointer to the first address.
 
-```C++
+```c++
 int a[10];
 int* b = new int[10]; //allocate n successive values to b
 a[5]=12;
@@ -39,7 +39,7 @@ a[5]=12;
 
 So to dynamically create a 2d array in C++, first we need to create an array of n pointers, and then for each pointer we allocate m successive addresses.
 
-```C++
+```c++
 int* example = new int[n]; //allocate n values to example
 int** a = new int*[n]; //allocate n pointers to a
 for(int i=0;i<n;i++)
@@ -49,7 +49,7 @@ for(int i=0;i<n;i++)
 
 An example to understand what's actually C++ is doing, is to create a pointer to an existing 2d array.
 
-```C++
+```c++
 int a[n][m];
 int example1[m]; //In this clause, we create a pointer to an array of m elements.
 int* example2; //In this clause, we create a pointer to a value of int.
@@ -74,7 +74,7 @@ So in "int(*p)[m]", it also declare two things:
 
 That's why this is incorrect:
 
-```C++
+```c++
 int a[n][m];
 int** p=a;
 ```
