@@ -5,7 +5,7 @@ tag: note
 categories: blog
 ---
 
-Every time I studied about pointers in C++, it soon became confusing again after a period of time, especially it's function is replaced in other programming languages. So I'll create a post especially for it.
+Every time I studied about pointers in C++, it soon got forgot and became confusing again after a period of time because it's totally replaced in other programming languages. I'll especially create a post about it for future review.
 
 C++ used call-by-value as default. When we clarify a new variable, it's actually an address, and value stored in corresponding address.
 
