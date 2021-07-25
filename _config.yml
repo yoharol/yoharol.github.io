@@ -21,7 +21,7 @@ title: "Yoharol's Blog"
 description: "Do something interesting everyday."
 baseurl: # the subpath of your site, e.g. "/blog"
 url: "https://yoharol.github.io"
-logo: "/img/Profile.png"
+logo: "/img/Banner.png"
 date_format: "%B %-d, %Y"
 read_time: # reading time estimates, e.g. true
 words_per_minute: # 200
@@ -92,7 +92,7 @@ defaults:
 # Site Author
 author:
   name: Yoharol
-  picture: "/img/Profile2.png"
+  picture: "/img/profile-research.jpg"
   email: yuhansena@outlook.com
   twitter:
   links:
