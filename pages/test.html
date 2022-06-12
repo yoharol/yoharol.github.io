@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+  <meta charset="utf-8" name="author" content="name of author">
+  <link rel="icon" href="icon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="style.css">
+  <title>TITLE</title>
+  <script>
+    function displayDate() {
+      document.getElementById("date").innerHTML = Date();
+    }
+  </script>
+</head>
+
+<!-- This is comment -->
+
+<body>
+  this is some wild text.
+
+  and some wild paragraph.
+  <p></p>
+  <span>This is something free-to-use for css and js.</span>
+  <p></p>
+  <input type="text">
+  <input type="text" disabled="disabled">
+  <h1>H1 title</h1>
+  <p>Some normal text, meta data is utf-8 so we can type <span lang="zh">中文</span> also.</p>
+  <p>This is some <strong>strong text</strong></p>
+  <p>This is some <em>emphasize text</em></p>
+  <p>This is some text with <i>italic</i>, <b>bold</b> and <u>underline</u> text.</p>
+  <ul>
+    <li>list item1</li>
+    <li>list item2</li>
+    <li>list item3</li>
+  </ul>
+  <ol>
+    <li>ordered list item1</li>
+    <li>ordered list item2</li>
+    <li>ordered list item3
+      <ul>
+        <li>inside unordered item1</li>
+        <li>inside unordered item2</li>
+      </ul>
+    </li>
+  </ol>
+  <ul>
+    <li class="special"> this is special class item</li>
+    <li> this is <em>emphasized</em> only in list</li>
+  </ul>
+  <p>This is javascript:
+  <p id="date">date text</p>
+  </p>
+
+  <button type="button" onclick="displayDate()">Show date</button>
+  <p>
+    A link to Google:
+    <a href="https://www.google.com" title="This is some description" target="_blank">
+      link text
+    </a>.
+  </p>
+  <p>Here is an image:</p>
+  <img src="https://i.pinimg.com/564x/e5/0c/41/e50c41aa1f9c6f76440e3a722a8338fd.jpg">
+</body>
+
+</html>
