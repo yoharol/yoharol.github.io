@@ -1,16 +1,25 @@
 * {
     margin: 0px;
     padding: 0px;
-    font-family: Poppins;
 }
 
 body {
     margin: 0px;
     overflow: hidden;
-    background: #171723;
+    background: #282c34;
 }
 
-div {
+header {
+    background: black;
+    padding: 20px;
+    color: white;
+}
+
+section {
+    background-color: white;
+}
+
+div.cover {
     position: absolute;
     top: 0;
     bottom: 0;
@@ -21,6 +30,40 @@ div {
     justify-content: center;
     flex-direction: column;
     text-align: center;
+}
+
+div.container {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 20vw 50vw 1fr;
+    grid-template-rows: 13vh 1fr 1fr 4vh;
+    gap: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+div.container .header {
+    grid-row: 1;
+    grid-column-start: 2;
+    grid-column-end: 4;
+    text-align: center;
+    font-family: 'League Gothic', sans-serif;
+}
+
+
+.container .sideBar {
+    grid-column: 2;
+    grid-row-start: 2;
+    grid-row-end: 4;
+    padding: 2vh 2vw;
+}
+
+.container .canvasContainer {
+    grid-column: 3;
+    grid-row-start: 2;
+    grid-row-end: 4;
+    padding: 2vh 2vw;
 }
 
 h1 {
@@ -55,8 +98,57 @@ button {
 
 canvas.webgl {
     position: fixed;
-    top: 0;
-    left: 0;
+    left: 36vw;
+    top: 17vh;
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+}
+
+input:focus {
+    outline: none;
+}
+
+input.color {
+    text-align: center;
+    margin: 2px;
+    padding: 5px;
+    border: 0;
+    outline: 0;
+    width: 140px;
+    height: 20px;
+}
+
+button.sub {
+    background: url(remove.png);
+    background-size: 25px 25px;
+    background-repeat: no-repeat;
+    text-align: center;
+    font-size: 40px;
+    height: 25px;
+    width: 25px;
+    margin-left: 10%;
+    color: #3264fe;
+    display: flex;
+    border-radius: 0px;
+    align-items: center;
+    justify-content: center;
+}
+
+button.add-color {
+    background-color: #d44b3e;
+    font-size: 30px;
+    height: 40px;
     width: 100%;
-    height: 100%;
+    font-family: 'League Gothic', sans-serif;
+    letter-spacing: 2px;
+    border: 5px solid #9e3636;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.color-slot {
+    display: flex;
+    align-items: center;
 }
