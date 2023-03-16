@@ -6,7 +6,7 @@ categories: research
 mathjax: true
 ---
 
-In this article we discuss a simple exmaple of inverse kinematics.
+In this article we discuss a simple but nontraditional exmaple of inverse kinematics.
 
 We have an object composed of vertices $\mathbf{x}_1, \mathbf{x}_2, \dots, \mathbf{x}_n\in\mathbb{R}^{dim}$($d=2$ or $3$) with corresponding rest pose position $\overline{\mathbf{x}}_1, \overline{\mathbf{x}}_2, \dots, \overline{\mathbf{x}}_n$. For convenience we concatenate all of positions into a vector $\mathbf{X}\in\mathbf{R}^{n\cdot\mathrm{dim}\times 1}$. 
 
@@ -77,8 +77,55 @@ $$
 \end{bmatrix}
 $$
 
-Notice that coefficient on the left side is constant and symmetric, so we can precompute its inverse matrix or Cholesky decomposition. Only the right side need to be updated.
+Notice that coefficient on the left side is constant, symmetric and positive definite, so we can precompute its inverse matrix or Cholesky decomposition. Only the right side need to be updated.
 
 ## Find Optimized Rotation
 
+Now we assume that all translation of control points are fixed. Recall the term to be minimized:
 
+$$g(\theta)=\frac{1}{2}\big(\mathbf{X}-\mathbf{X}^r(\theta)\big)^T\mathbf{M}\big(\mathbf{X}-\mathbf{X}^r(\theta)\big)$$
+
+It is not convenient to subsitute rotation parameters into this formula. However, we can simplify its first order derivative:
+
+$$g'(\theta)=\bigg(\frac{\partial \mathbf{X}^r(\theta)}{\partial \theta}\bigg)^T\mathbf{M}(\mathbf{X}-\mathbf{X}^r(\theta))$$
+
+This term can be seperated row by row as:
+
+$$g'_k=\sum_{i=1}^n m_i \big(\frac{\partial \mathbf{x}_i^r}{\partial \theta_k}\big)^T(\mathbf{x}_i-\mathbf{x}_i^r)$$
+
+We first discuss the case in 3-dimentional space. As we mentioned before, the inverse kinematics is performed in each time step of a continuous physics simulation, and physics based dyanmics naturally require little time steps. It means that for all control points, change of states is minimum. Thus for rotation matrix from each control point $\mathbf{R}_j$, we can parameterize it by rotation vector $\mathbf{p}_j$. The first order derivative can be obtained by infinitestimal rotation as:
+
+$$\frac{\partial\mathbf{R}_j(\mathbf{p}_j)\mathbf{u}}{\partial \mathbf{p}}=-[\mathbf{u}]_\times$$
+
+The notation $[\mathbf{u}]_\times$ is a cross product matrix defined as follows:
+
+$$
+[\mathbf{u}]_{\times}=\begin{bmatrix}
+0 & -u_z & u_y\\
+u_z & 0 & -u_x\\
+-u_y & u_x & 0
+\end{bmatrix}
+$$
+
+In 2-dimentional case it will be a column vector:
+
+$$[\mathbf{u}]_\times=\begin{pmatrix} u_y & -u_x \end{pmatrix}^T$$
+
+Then we can rewrite the first order derivative as:
+
+$$
+\frac{\partial g(\mathbf{p})}{\partial \mathbf{p}_j} = \sum_{i=1}^n m_iw_{ij}[\mathbf{\overline{d}}_j-\mathbf{\overline{x}}_i]_\times ^T (\mathbf{x}_i-\mathbf{x}^r_i)
+$$
+
+We perform a linear search in direction of first order derivative. Once we get the infinitestimal rotation vector $\delta\mathbf{p}_j$, rotation of control point $j$ will be updated by $\mathbf{R}_j(\mathbf{p}_j+\delta\mathbf{p}_j)=(\mathbf{I}+[\mathbf{p}_j]_\times)\mathbf{R}_j$. 
+
+For hierarchical structure skeleton, the translation of child node is decided by rotation and translation of parent node. If such structure exist, we update related control points in a specified order, from root to leaves. Every time we are updating the rotation matrix, we also update the translation of all related children if it is part of the hierarchical structure.
+
+We summarize our inverse kinematics algorithm as follows:
+
+1. Fix the rotation, find optimized translation for all control points
+2. Fix the translation, find optimized infiniestimal rotation vector for all control points.
+3. Update rotation matrix and translation of related children
+
+
+ 
