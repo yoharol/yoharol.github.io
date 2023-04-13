@@ -6,6 +6,7 @@ categories: research
 mathjax: true
 ---
 
+
 In this article we discuss a simple but nontraditional exmaple of inverse kinematics.
 
 We have an object composed of vertices $\mathbf{x}_1, \mathbf{x}_2, \dots, \mathbf{x}_n\in\mathbb{R}^{dim}$($d=2$ or $3$) with corresponding rest pose position $\overline{\mathbf{x}}_1, \overline{\mathbf{x}}_2, \dots, \overline{\mathbf{x}}_n$. For convenience we concatenate all of positions into a vector $\mathbf{X}\in\mathbf{R}^{n\cdot\mathrm{dim}\times 1}$. 
@@ -43,7 +44,7 @@ Just as how we define $\mathbf{X}$, we can compress translations of all cntrol p
 
 $$\mathbf{X}^r = \mathbf{X}^r_{\mathbf{R}}+\mathbf{W}\mathbf{d}$$
 
-We substitute this linear matrix multiplication into $g(\theta)$. In our method the inverse kinematics step is performed in each time step. It is reasonable to take parameter from previous time step as the initial state $\mathbf{d}_{t-1}$ , and denote translation in current time step as $\mathbf{d}_{t}=\mathbf{d}_{t-1}+\delta\mathbf{d}$ . With a new vector defined as $\mathbf{X}'=\mathbf{X}-\mathbf{X}^r_R-\mathbf{W}\mathbf{d}_{t-1}$ , the optimization problem get much simpler:
+We substitute this linear matrix multiplication into $g(\theta)$. In our method the inverse kinematics step is performed in each time step. It is reasonable to take parameter from previous time step as the initial state $\mathbf{d}_{t-1}$, and denote translation in current time step as $\mathbf{d}_{t}=\mathbf{d}_{t-1}+\delta\mathbf{d}$ . With a new vector defined as $\mathbf{X}'=\mathbf{X}-\mathbf{X}^r_R-\mathbf{W}\mathbf{d}_{t-1}$ , the optimization problem get much simpler:
 
 $$\ \ \ g(\mathbf{d})=\frac{1}{2}\big(\mathbf{X}'-\mathbf{W}\delta\mathbf{d}\big)^T\mathbf{M}\big(\mathbf{X}'-\mathbf{W}\delta\mathbf{d}\big)$$
 
