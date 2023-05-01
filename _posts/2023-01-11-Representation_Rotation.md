@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Rotation and Derivation"
+title: "Representations of Rotation and Derivation"
 tag: note
 categories: research
 mathjax: true
