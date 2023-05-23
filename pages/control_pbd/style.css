@@ -1,0 +1,88 @@
+html{
+  font-family: "Merriweather", serif;
+  box-sizing: border-box;
+  font-size: 18px;
+  -webkit-text-size-adjust: 100%;
+  color: rgb(0, 0, 0);
+  background-color: #f8f1f1;
+}
+
+
+
+body {
+  margin-left: 18%;
+  margin-right: 18%;
+  line-height: 1.5;
+}
+
+
+title{
+  font-family: "Merriweather", serif;
+}
+
+p{
+  color: #025464;
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+a{
+  text-decoration: none;
+}
+
+.link{
+  margin-left: 10px;
+  font-weight: bold;
+}
+
+.comment{
+  font-style: italic;
+  color: #025464f0;
+}
+
+h1 {
+  color: #e57c23;
+  text-align: center;
+}
+
+h2 {
+}
+
+h3{
+  color: #025464;
+}
+
+table{
+  border-collapse: collapse;
+  width: 100%;
+}
+
+ul{
+  color: #025464;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.cover{
+  display: grid;
+  align-items:start; 
+  grid-template-columns: 1fr 2fr;
+}
+
+footer{
+  margin-top: 60px;
+  margin-bottom: 100px;
+}
+
+
+table{
+  border-collapse: collapse;
+  width: 100%;
+}
+
+i{
+  color: #025464;
+}
