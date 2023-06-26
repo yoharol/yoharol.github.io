@@ -44,7 +44,7 @@ Just as how we define $\mathbf{X}$, we can compress translations of all cntrol p
 
 $$\mathbf{X}^r = \mathbf{X}^r_{\mathbf{R}}+\mathbf{W}\mathbf{d}$$
 
-We substitute this linear matrix multiplication into $g(\theta)$. In our method the inverse kinematics step is performed in each time step. It is reasonable to take parameter from previous time step as the initial state $\mathbf{d}_{t-1}$, and denote translation in current time step as $\mathbf{d}_{t}=\mathbf{d}_{t-1}+\delta\mathbf{d}$ . With a new vector defined as $\mathbf{X}'=\mathbf{X}-\mathbf{X}^r_R-\mathbf{W}\mathbf{d}_{t-1}$ , the optimization problem get much simpler:
+We substitute this linear matrix multiplication into $g(\theta)$. In our method the inverse kinematics step is performed in each time step. It is reasonable to take parameter from previous time step as the initial state $$\mathbf{d}_{t-1}$$, and denote translation in current time step as $$\mathbf{d}_{t}=\mathbf{d}_{t-1}+\delta\mathbf{d}$$ . With a new vector defined as $\mathbf{X}'=\mathbf{X}-\mathbf{X}^r_R-\mathbf{W}\mathbf{d}_{t-1}$ , the optimization problem get much simpler:
 
 $$\ \ \ g(\mathbf{d})=\frac{1}{2}\big(\mathbf{X}'-\mathbf{W}\delta\mathbf{d}\big)^T\mathbf{M}\big(\mathbf{X}'-\mathbf{W}\delta\mathbf{d}\big)$$
 
@@ -118,7 +118,7 @@ $$
 \frac{\partial g(\mathbf{p})}{\partial \mathbf{p}_j} = \sum_{i=1}^n m_iw_{ij}[\mathbf{\overline{d}}_j-\mathbf{\overline{x}}_i]_\times ^T (\mathbf{x}_i-\mathbf{x}^r_i)
 $$
 
-We perform a linear search in direction of first order derivative. Once we get the infinitestimal rotation vector $\delta\mathbf{p}_j$, rotation of control point $j$ will be updated by $\mathbf{R}_j(\mathbf{p}_j+\delta\mathbf{p}_j)=(\mathbf{I}+[\mathbf{p}_j]_\times)\mathbf{R}_j$. 
+We perform a linear search in direction of first order derivative. Once we get the infinitestimal rotation vector $\delta\mathbf{p}_j$, rotation of control point $j$ will be updated by $$\mathbf{R}_j(\mathbf{p}_j+\delta\mathbf{p}_j)=(\mathbf{I}+[\mathbf{p}_j]_\times)\mathbf{R}_j$$. 
 
 For hierarchical structure skeleton, the translation of child node is decided by rotation and translation of parent node. If such structure exist, we update related control points in a specified order, from root to leaves. Every time we are updating the rotation matrix, we also update the translation of all related children if it is part of the hierarchical structure.
 

@@ -67,7 +67,7 @@ $$
 \sum_i \lVert\mathbf{x}_i\rVert^2=\text{tr}(\mathbf{X}\mathbf{X}^T)
 $$
 
-Now the problem is the term $\mathbf{x}_{j1}-\mathbf{x}_{j2}-\mathbf{d}_j$. We set up a *selection matrix* as:
+Now the problem is the term $$\mathbf{x}_{j1}-\mathbf{x}_{j2}-\mathbf{d}_j$$. We set up a *selection matrix* as:
 
 $$
 \begin{align*}
