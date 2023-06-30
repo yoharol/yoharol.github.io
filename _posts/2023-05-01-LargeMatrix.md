@@ -37,7 +37,7 @@ $$
 \mathbf{X}'=\mathbf{M}\mathbf{T}
 $$
 
-in which $\mathbf{M}_j = \begin{pmatrix}w_{1j}(\mathbf{x}_1^T\ \ 1) & \dots & w_{nj}(\mathbf{x}_n^T \ \ 1)\end{pmatrix}$. 
+in which $$\mathbf{M}_j = \begin{pmatrix}w_{1j}(\mathbf{x}_1^T\ \ 1) & \dots & w_{nj}(\mathbf{x}_n^T \ \ 1)\end{pmatrix}$$. 
 
 On the other case, suppose we want to focus on studying vertex position $\mathbf{x}_i$. What will the matrix form be like? The answer is quite simple, so I just leave it here as an open question.
 
