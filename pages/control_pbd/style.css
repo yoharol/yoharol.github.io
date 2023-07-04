@@ -1,7 +1,7 @@
 html {
   font-family: "Merriweather", serif;
   box-sizing: border-box;
-  font-size: 22px;
+  font-size: 19px;
   -webkit-text-size-adjust: 100%;
   color: rgb(0, 0, 0);
   background-color: #ffffff;
@@ -17,7 +17,7 @@ body {
   body {
     margin: 0 auto;
     /* Set your desired fixed width here */
-    max-width: 1000px;
+    max-width: 850px;
     /* Set your desired maximum width */
   }
 }
@@ -25,7 +25,7 @@ body {
 
 title {
   font-family: "Merriweather", serif;
-  font-size: 36px;
+  font-size: 35px;
 }
 
 p {
