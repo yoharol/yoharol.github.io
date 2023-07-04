@@ -1,10 +1,10 @@
-html{
+html {
   font-family: "Merriweather", serif;
   box-sizing: border-box;
   font-size: 18px;
   -webkit-text-size-adjust: 100%;
   color: rgb(0, 0, 0);
-  background-color: #f8f1f1;
+  background-color: #ffffff;
 }
 
 
@@ -16,11 +16,11 @@ body {
 }
 
 
-title{
+title {
   font-family: "Merriweather", serif;
 }
 
-p{
+p {
   color: #025464;
   display: block;
   margin-block-start: 1em;
@@ -30,16 +30,16 @@ p{
   font-family: 'Times New Roman', Times, serif;
 }
 
-a{
+a {
   text-decoration: none;
 }
 
-.link{
+.link {
   margin-left: 10px;
   font-weight: bold;
 }
 
-.comment{
+.comment {
   font-style: italic;
   color: #025464f0;
 }
@@ -49,30 +49,29 @@ h1 {
   text-align: left;
 }
 
-h2 {
-}
+h2 {}
 
-h3{
+h3 {
   color: #025464;
 }
 
-table{
+table {
   border-collapse: collapse;
   width: 100%;
 }
 
-ul{
+ul {
   color: #025464;
   font-family: 'Times New Roman', Times, serif;
 }
 
-.cover{
+.cover {
   display: grid;
-  align-items:start; 
+  align-items: start;
   grid-template-columns: 1fr 2fr;
 }
 
-footer{
+footer {
   margin-top: 60px;
   margin-bottom: 100px;
 }
