@@ -1,13 +1,17 @@
-html{
+html {
   font-family: "Merriweather", serif;
   box-sizing: border-box;
-  font-size: 18px;
+  font-size: 22px;
   -webkit-text-size-adjust: 100%;
   color: rgb(0, 0, 0);
   background-color: #f8f1f1;
 }
 
-
+@media screen and (min-width: 320px) {
+  html {
+    font-size: calc(22px + 2 * ((100vw - 320px) / 960));
+  }
+}
 
 body {
   margin-left: 18%;
@@ -15,12 +19,21 @@ body {
   line-height: 1.5;
 }
 
+@media (min-width: 1200px) {
+  body {
+    margin: 0 auto;
+    /* Set your desired fixed width here */
+    max-width: 732px;
+    /* Set your desired maximum width */
+  }
+}
 
-title{
+
+title {
   font-family: "Merriweather", serif;
 }
 
-p{
+p {
   color: #025464;
   display: block;
   margin-block-start: 1em;
@@ -30,16 +43,16 @@ p{
   font-family: 'Times New Roman', Times, serif;
 }
 
-a{
+a {
   text-decoration: none;
 }
 
-.link{
+.link {
   margin-left: 10px;
   font-weight: bold;
 }
 
-.comment{
+.comment {
   font-style: italic;
   color: #025464f0;
 }
@@ -49,40 +62,39 @@ h1 {
   text-align: center;
 }
 
-h2 {
-}
+h2 {}
 
-h3{
+h3 {
   color: #025464;
 }
 
-table{
+table {
   border-collapse: collapse;
   width: 100%;
 }
 
-ul{
+ul {
   color: #025464;
   font-family: 'Times New Roman', Times, serif;
 }
 
-.cover{
+.cover {
   display: grid;
-  align-items:start; 
+  align-items: start;
   grid-template-columns: 1fr 2fr;
 }
 
-footer{
+footer {
   margin-top: 60px;
   margin-bottom: 100px;
 }
 
 
-table{
+table {
   border-collapse: collapse;
   width: 100%;
 }
 
-i{
+i {
   color: #025464;
 }
