@@ -70,6 +70,15 @@ table {
   width: 100%;
 }
 
+pre code {
+  color: #e57c23;
+  background-color: #f5f5f5;
+  border-radius: 3px;
+  border: 1px solid #CCC;
+  padding: 0.5em 0.7em;
+  display: block !important;
+}
+
 ul {
   color: #025464;
   font-family: 'Times New Roman', Times, serif;
