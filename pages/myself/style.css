@@ -65,6 +65,11 @@ ul {
   font-family: 'Times New Roman', Times, serif;
 }
 
+dl, dt, dd {
+  color: #025464;
+  font-family: 'Times New Roman', Times, serif;
+}
+
 .cover {
   display: grid;
   align-items: start;
