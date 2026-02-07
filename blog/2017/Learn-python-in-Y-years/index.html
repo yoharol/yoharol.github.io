@@ -1,0 +1,311 @@
+<!DOCTYPE html> <html lang="en"> <head> <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> <meta charset="utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> <meta http-equiv="X-UA-Compatible" content="IE=edge"> <title> Note: Python Basics | Yoharol's Blog </title> <meta name="author" content="Yuhan Wu"> <meta name="description" content="Do something interesting everyday. "> <link rel="stylesheet" href="/assets/css/bootstrap.min.css?a4b3f509e79c54a512b890d73235ef04"> <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdbootstrap@4.20.0/css/mdb.min.css" integrity="sha256-jpjYvU3G3N6nrrBwXJoVEYI/0zw8htfFnhT9ljN3JJw=" crossorigin="anonymous"> <link defer rel="stylesheet" href="/assets/css/academicons.min.css?f0b7046b84e425c55f3463ac249818f5"> <link defer rel="stylesheet" href="/assets/css/scholar-icons.css?62b2ac103a88034e6882a5be5f3e2772"> <link defer rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Gowun+Batang&amp;family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&amp;display=swap"> <link defer rel="stylesheet" href="/assets/css/jekyll-pygments-themes-github.css?591dab5a4e56573bf4ef7fd332894c99" media="" id="highlight_theme_light"> <link rel="shortcut icon" href="data:image/svg+xml,&lt;svg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20100%20100%22&gt;&lt;text%20y=%22.9em%22%20font-size=%2290%22&gt;%F0%9F%90%AC&lt;/text&gt;&lt;/svg&gt;"> <link rel="stylesheet" href="/assets/css/main.css?d41d8cd98f00b204e9800998ecf8427e"> <link rel="canonical" href="https://yoharol.github.io/blog/2017/Learn-python-in-Y-years/"> <script src="/assets/js/theme.js?a81d82887dd692e91686b43de4542f18"></script> <link defer rel="stylesheet" href="/assets/css/jekyll-pygments-themes-native.css?5847e5ed4a4568527aa6cfab446049ca" media="none" id="highlight_theme_dark"> <script>
+    initTheme();
+  </script> </head> <body class="fixed-top-nav "> <header> <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top" role="navigation"> <div class="container"> <a class="navbar-brand title font-weight-lighter" href="/"> Yoharol's Blog </a> <button class="navbar-toggler collapsed ml-auto" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar top-bar"></span> <span class="icon-bar middle-bar"></span> <span class="icon-bar bottom-bar"></span> </button> <div class="collapse navbar-collapse text-right" id="navbarNav"> <ul class="navbar-nav ml-auto flex-nowrap"> <li class="nav-item "> <a class="nav-link" href="/">about </a> </li> <li class="nav-item active"> <a class="nav-link" href="/blog/">blog </a> </li> <li class="nav-item "> <a class="nav-link" href="/cv/">CV </a> </li> <li class="nav-item"> <button id="search-toggle" title="Search" onclick="openSearchModal()"> <span class="nav-link">ctrl k <i class="ti ti-search"></i></span> </button> </li> <li class="toggle-container"> <button id="light-toggle" title="Change theme"> <i class="ti ti-sun-moon" id="light-toggle-system"></i> <i class="ti ti-moon-filled" id="light-toggle-dark"></i> <i class="ti ti-sun-filled" id="light-toggle-light"></i> </button> </li> </ul> </div> </div> </nav> <progress id="progress" value="0"> <div class="progress-container"> <span class="progress-bar"></span> </div> </progress> </header> <div class="container mt-5" role="main"> <div class="post"> <header class="post-header"> <h1 class="post-title">Note: Python Basics</h1> <p class="post-meta"> Created on July 22, 2017 </p> <p class="post-tags"> <a href="/blog/2017"> <i class="fa-solid fa-calendar fa-sm"></i> 2017 </a>   ·   <a href="/blog/tag/note"> <i class="fa-solid fa-hashtag fa-sm"></i> note</a>   ·   <a href="/blog/category/blog"> <i class="fa-solid fa-tag fa-sm"></i> blog</a> </p> </header> <article class="post-content"> <div id="markdown-content"> <p>备忘录性质python笔记，主要来源于网站Learn X in Y minute, <a href="https://learnxinyminutes.com/docs/python/" rel="external nofollow noopener" target="_blank">link</a>.</p> <h1 id="python-basic">Python Basic</h1> <h2 id="basic-data-type">Basic data type</h2> <ul> <li>1, 1.0 -&gt; +-*/ <ul> <li>5//3 : =1 integer division <strong>rounds down</strong> </li> <li>5%3 : =1 <strong>modulo</strong> operation</li> <li>5**3 : =125 <strong>exponentiation</strong>(5 to the 3th power)</li> <li>5/1 : = 5.0 the result of division is <strong>always a float</strong> </li> </ul> </li> <li>True,False -&gt; and , or , not <ul> <li>0==False, 1==True</li> <li>2!=True</li> <li>True + True == 2</li> <li>True and False are <strong>actually 1 and 0</strong> but with different keywords</li> <li>bool(5)==true <strong>bool()</strong> truns integers to True/False</li> <li>5 or 0 == -5 <strong>bitwises</strong> treat numbers equally</li> <li>b is a -&gt; <strong>same as b==a</strong> </li> </ul> </li> <li>“This is a string” <ul> <li>‘This is also a string’</li> <li>“string a”+”string b”</li> <li>“string a” “string b” <strong>auto connect</strong> </li> <li>“string”*3</li> <li>“string”[0]=’s’</li> <li>len(“string”)=6</li> <li>f”length of {x} is {len(x)}” <strong>f string</strong> </li> <li>”{} is a string”.format(x) : <strong>format string</strong> </li> </ul> </li> <li>NONE (is an object like NULL in C++) <ul> <li>None is NONE</li> <li>None, 0, empty strings/lists/dicts/tuples all evaluate to False</li> <li>bool({}) == False</li> </ul> </li> <li>print(x) <ul> <li>print(x) automaticly add new line</li> <li>print(x, end=”!”) no newline</li> <li>x=input(“Enter some data:”) returns data <strong>as string</strong> </li> </ul> </li> <li>“Yay” if 0 &gt; 1 else “Nah”</li> </ul> <h2 id="data-structure">Data Structure</h2> <ul> <li>li = [1,2,3] <ul> <li>li.append(4)</li> <li>li.pop() remove and show the last</li> <li>li[0]</li> <li>li[1:3] return list from index 1 to 3</li> <li>li[1:] return list starting from index 1</li> <li>li[1<img class="emoji" title=":100:" alt=":100:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f4af.png" height="20" width="20">5] <strong>li[start<img class="emoji" title=":end:" alt=":end:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f51a.png" height="20" width="20">step]</strong> </li> <li>li[::5] pick every fifth entry</li> <li>li[::-1] return list in reverse order</li> <li>li2 = li[:] copy list</li> <li>li2 is li <strong>always false</strong> </li> <li>del li[2] : remove li[2]</li> <li>li.remove(2) : remove <strong>first occurence of value 2</strong> </li> <li>lia + lib</li> <li>li.insert(1,5) : put 5 on index 1</li> <li>li.extend(b) : = lisT+b</li> <li>li.index(2) : return <strong>index of first occurence of value 2</strong> </li> <li>1 in li : True or False</li> <li>len(lisT)</li> </ul> </li> <li>tup = (1,2,3) : tuples are like lists but are <strong>immutable</strong>(unable to change) <ul> <li>A tuple of length one has to have a comma after the last element</li> <li>type((1)) : int</li> <li>type((1,)) : tuple</li> <li>typle(()) : tuple</li> <li>len(tup)</li> <li>tup + (4,5,6)</li> <li>tup[:2]</li> <li>2 in tup</li> </ul> </li> <li>a, b, c = (1, 2, 3)</li> <li>a, *b, c = (1, 2, 3, 4) : b=[2, 3]</li> <li>a, b = b, a : swap a and b</li> <li>dict = {“one” : 1, “two” : 2, “three” : 3} <ul> <li>dict[“one”] : 1</li> <li>list(dict.keys()) : [“one”,”two”,”three”]</li> <li>list(dict.values()) : [1,2,3]</li> <li>“one” in dict : True</li> <li>1 in dict : False(<strong>only check keys</strong>)</li> <li>dict.get(“one”) : 1</li> <li>dict.get(“four”) : None</li> <li>dict.get(“four”, 4) : 4 is a default value in case the key is missing</li> <li>dict.setdefault(“four”, 4) : inserts only if “four” isn’t present</li> <li>dict.update({“four”:4}) : adding</li> <li>dict[“four”] = 4 : adding</li> <li>del dict[“four”] : remove the key “four” form dict</li> </ul> </li> <li>est = set() <ul> <li>est = {1, 1, 2, 3, 4, 4}</li> <li>est = {(1,), 1}</li> <li>est = {[1, 2], 1} : Wrong, element of set has to be immutable</li> <li>est = est2</li> <li>est.add(5)</li> <li>est2 = {2, 4, 5}</li> <li>{1, 2, 3, 4} &amp; {2, 3, 5} : ={2, 3} 交集</li> <li>{1, 2, 3, 4} | {2, 3, 5} : = {1, 2, 3, 4, 5} 并集</li> <li>{1, 2, 3, 4} - {2, 3, 5} : = {1, 4}</li> <li>{1, 2, 3, 4} ^ {2, 3, 5} : = {1, 4, 5} 并集减交集</li> <li>{1, 2} &gt;= {1, 2, 3} : true</li> <li>{1, 2} &lt;= {1, 2, 3} : false</li> <li>2 in {1, 2}</li> <li>est2 = set1.copy()</li> </ul> </li> </ul> <h3 id="dynamicly-construct-list-set-and-dict">Dynamicly construct list, set and dict</h3> <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="p">[</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">+</span><span class="mi">10</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]]</span>
+    <span class="p">[</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">]</span> <span class="k">if</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="mi">5</span><span class="p">]</span>
+    <span class="p">{</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="sh">'</span><span class="s">abcdefg</span><span class="sh">'</span> <span class="k">if</span> <span class="n">x</span> <span class="ow">not</span> <span class="ow">in</span> <span class="sh">'</span><span class="s">abc</span><span class="sh">'</span><span class="p">}</span>
+    <span class="p">{</span><span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nf">range</span><span class="p">(</span><span class="mi">5</span><span class="p">)}</span>
+</code></pre></div></div> <h3 id="mark-copy">Mark: copy</h3> <p>For a=b, a is b will give True. For a = b.copy(), a is b will give Flse.</p> <p>When we set a=b, they are actually <strong>reference to the same object</strong>. if we change value of a like a = {3, 4}, we <strong>create a new object {3, 4} and then set a refer to this new object</strong>, so value of b won’t change.</p> <p>The operation ‘==’ looks for same <strong>value</strong>, but ‘is’ looks for same <strong>reference</strong>.</p> <p>If we set a = [1, 2], and b=a, then if we change a vlue in a like a[0]=3, b also change because what we did is change original object, not create a new one.</p> <h3 id="iterable">Iterable</h3> <p>An iterable is an object that can be treated as a sequence, but cannot address elemetns by index.</p> <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="n">new_dict</span> <span class="o">=</span> <span class="p">{</span><span class="sh">"</span><span class="s">one</span><span class="sh">"</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="sh">"</span><span class="s">two</span><span class="sh">"</span><span class="p">:</span><span class="mi">2</span><span class="p">,</span> <span class="sh">"</span><span class="s">three</span><span class="sh">"</span><span class="p">:</span><span class="mi">3</span><span class="p">}</span>
+    <span class="n">our_iterable</span> <span class="o">=</span> <span class="n">new_dict</span><span class="p">.</span><span class="nf">keys</span><span class="p">()</span>
+
+    <span class="nf">print</span><span class="p">(</span><span class="n">our_iterable</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">our_iterable</span><span class="p">:</span>
+        <span class="nf">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+    
+    <span class="n">our_iterator</span> <span class="o">=</span> <span class="nf">iter</span><span class="p">(</span><span class="n">our_iterable</span><span class="p">)</span>
+    <span class="nf">next</span><span class="p">(</span><span class="n">our_iterator</span><span class="p">)</span> <span class="c1">#=&gt; "one"
+</span>    <span class="nf">next</span><span class="p">(</span><span class="n">out_iterator</span><span class="p">)</span> <span class="c1">#=&gt; "two"
+</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">our_iterator</span><span class="p">:</span>
+        <span class="nf">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+    
+    <span class="nf">list</span><span class="p">(</span><span class="n">our_iterable</span><span class="p">)</span> <span class="c1">#=&gt; reuturns ["one", "two", "three"]
+</span>
+</code></pre></div></div> <h2 id="control-flow-and-iterables">Control Flow and Iterables</h2> <h3 id="if-statement">if statement</h3> <p>if : - elif : - else:</p> <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="k">if</span> <span class="n">some_var</span> <span class="o">&gt;</span> <span class="mi">10</span><span class="p">:</span>
+        <span class="k">print</span> <span class="sh">"</span><span class="s">some_var is totally bigger than 10.</span><span class="sh">"</span>
+    <span class="k">elif</span> <span class="n">some_var</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">:</span>  <span class="c1"># This elif clause is optional.
+</span>        <span class="k">print</span> <span class="sh">"</span><span class="s">some_var is smaller than 10.</span><span class="sh">"</span>
+    <span class="k">else</span><span class="p">:</span>  <span class="c1"># This is optional too.
+</span>        <span class="k">print</span> <span class="sh">"</span><span class="s">some_var is indeed 10.</span><span class="sh">"</span>
+</code></pre></div></div> <p>for in :</p> <h3 id="for-loop">for loop</h3> <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="k">for</span> <span class="n">animal</span> <span class="ow">in</span> <span class="p">[</span><span class="sh">"</span><span class="s">dog</span><span class="sh">"</span><span class="p">,</span> <span class="sh">"</span><span class="s">cat</span><span class="sh">"</span><span class="p">,</span> <span class="sh">"</span><span class="s">mouse</span><span class="sh">"</span><span class="p">]:</span>
+        <span class="c1"># You can use {0} to interpolate formatted strings. (See above.)
+</span>        <span class="k">print</span> <span class="sh">"</span><span class="s">{0} is a mammal</span><span class="sh">"</span><span class="p">.</span><span class="nf">format</span><span class="p">(</span><span class="n">animal</span><span class="p">)</span>
+    
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nf">range</span><span class="p">(</span><span class="mi">4</span><span class="p">):</span>
+        <span class="k">print</span> <span class="n">i</span>
+    <span class="sh">"""</span><span class="s">
+    </span><span class="sh">"</span><span class="s">range(number)</span><span class="sh">"</span><span class="s"> returns a list of numbers
+    from zero to the given number
+    </span><span class="sh">"""</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nf">range</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">8</span><span class="p">):</span>
+        <span class="k">print</span> <span class="n">i</span>
+    
+    <span class="n">animals</span> <span class="o">=</span> <span class="p">[</span><span class="sh">'</span><span class="s">cat</span><span class="sh">'</span><span class="p">,</span> <span class="sh">'</span><span class="s">dog</span><span class="sh">'</span><span class="p">,</span> <span class="sh">'</span><span class="s">monkey</span><span class="sh">'</span><span class="p">]</span>         
+    <span class="k">for</span> <span class="n">a</span><span class="p">,</span><span class="n">b</span> <span class="ow">in</span> <span class="nf">enumerate</span><span class="p">(</span><span class="n">animals</span><span class="p">):</span>           <span class="c1">#enumerate: get both index and item in shape of (a,b)
+</span>        <span class="k">print</span> <span class="sh">"</span><span class="s">{}. {} is a kind of animal</span><span class="sh">"</span><span class="p">.</span><span class="nf">format</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">)</span>
+    
+    <span class="c1">#for in list
+</span>    <span class="n">nums</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+    <span class="n">squares</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span> <span class="o">**</span> <span class="mi">2</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">nums</span> <span class="k">if</span> <span class="n">x</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">]</span>
+    <span class="k">print</span> <span class="n">squares</span>   <span class="c1"># Prints [0, 1, 4, 9, 16]
+</span></code></pre></div></div> <h3 id="while-loop">while loop</h3> <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="n">x</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">while</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">4</span><span class="p">:</span>
+        <span class="k">print</span> <span class="n">x</span>
+        <span class="n">x</span> <span class="o">+=</span> <span class="mi">1</span>  <span class="c1"># Shorthand for x = x + 1
+</span></code></pre></div></div> <h3 id="handle-exceptions-with-tryexcept">Handle exceptions with try/except</h3> <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="k">try</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="nc">IndexError</span><span class="p">(</span><span class="sh">"</span><span class="s">This is an index error</span><span class="sh">"</span><span class="p">)</span>  <span class="c1"># raise: bring up a error manually
+</span>    <span class="k">except</span> <span class="nb">IndexError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+        <span class="k">pass</span> <span class="c1"># what to do if the exception is catched
+</span>    <span class="nf">except </span><span class="p">(</span><span class="nb">TypeError</span><span class="p">,</span> <span class="nb">NameError</span><span class="p">):</span> <span class="c1">#multiple exceptions can be handled together
+</span>        <span class="k">pass</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nf">print</span><span class="p">(</span><span class="sh">"</span><span class="s">No exception, all good!</span><span class="sh">"</span><span class="p">)</span>
+    <span class="k">finally</span><span class="p">:</span> <span class="c1"># exception found or not, codes in finally will always be excuted
+</span>        <span class="nf">print</span><span class="p">(</span><span class="sh">"</span><span class="s">we can clean up resources here</span><span class="sh">"</span><span class="p">)</span>
+
+</code></pre></div></div> <h3 id="file-operation">File Operation</h3> <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="k">with</span> <span class="nf">open</span><span class="p">(</span><span class="sh">"</span><span class="s">myfile.txt</span><span class="sh">"</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">f</span><span class="p">:</span>
+            <span class="nf">print</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
+    
+    <span class="n">contents</span> <span class="o">=</span> <span class="p">{</span><span class="sh">"</span><span class="s">aa</span><span class="sh">"</span><span class="p">:</span><span class="mi">12</span><span class="p">,</span> <span class="sh">"</span><span class="s">bb</span><span class="sh">"</span><span class="p">:</span><span class="mi">21</span><span class="p">}</span>
+    <span class="k">with</span> <span class="nf">open</span><span class="p">(</span><span class="sh">"</span><span class="s">myfile1.txt</span><span class="sh">"</span><span class="p">,</span> <span class="sh">"</span><span class="s">w+</span><span class="sh">"</span><span class="p">)</span> <span class="k">as</span> <span class="nb">file</span><span class="p">:</span>
+        <span class="nb">file</span><span class="p">.</span><span class="nf">write</span><span class="p">(</span><span class="nf">str</span><span class="p">(</span><span class="n">contents</span><span class="p">))</span>
+    
+    <span class="k">with</span> <span class="nf">open</span><span class="p">(</span><span class="sh">'</span><span class="s">myfile1.txt</span><span class="sh">'</span><span class="p">,</span> <span class="sh">"</span><span class="s">r+</span><span class="sh">"</span><span class="p">)</span> <span class="k">as</span> <span class="nb">file</span><span class="p">:</span>
+        <span class="n">contents</span> <span class="o">=</span> <span class="nb">file</span><span class="p">.</span><span class="nf">read</span><span class="p">()</span>
+    
+</code></pre></div></div> <h2 id="functions">Functions</h2> <h3 id="creat-new-functions">creat new functions</h3> <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="k">def</span> <span class="nf">add</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+        <span class="k">print</span> <span class="sh">"</span><span class="s">x is {0} and y is {1}</span><span class="sh">"</span><span class="p">.</span><span class="nf">format</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span>  <span class="c1"># Return values with a return statement
+</span>    
+    <span class="nf">add</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">)</span>
+
+    <span class="nf">add</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="mi">6</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+    
+    <span class="k">def</span> <span class="nf">add</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="o">=</span><span class="mi">6</span><span class="p">)</span>
+        <span class="p">...</span>         <span class="c1">#optional keyword argument
+</span>
+
+    <span class="k">def</span> <span class="nf">varargs</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">args</span>
+    
+    <span class="nf">varargs</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>  <span class="c1"># =&gt; (1, 2, 3)
+</span>    
+    <span class="k">def</span> <span class="nf">all_the_args</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>   <span class="c1"># positional argumanets, keywords arguments
+</span>        <span class="k">print</span> <span class="n">args</span>
+        <span class="k">print</span> <span class="n">kwargs</span>
+    
+    <span class="sh">"""</span><span class="s">
+    all_the_args(1, 2, a=3, b=4) prints:
+        (1, 2)
+        {</span><span class="sh">"</span><span class="s">a</span><span class="sh">"</span><span class="s">: 3, </span><span class="sh">"</span><span class="s">b</span><span class="sh">"</span><span class="s">: 4}
+    </span><span class="sh">"""</span>
+    
+    <span class="n">x</span> <span class="o">=</span> <span class="mi">5</span>
+    <span class="k">def</span> <span class="nf">set_global_x</span><span class="p">(</span><span class="n">num</span><span class="p">):</span>
+        <span class="k">global</span> <span class="n">x</span>                   <span class="c1"># if not global, x will not be the same as global variable x
+</span>        <span class="k">print</span> <span class="n">x</span>  <span class="c1"># =&gt; 5
+</span>        <span class="n">x</span> <span class="o">=</span> <span class="n">num</span>  <span class="c1"># global var x is now set to 6
+</span>        <span class="k">print</span> <span class="n">x</span>  <span class="c1"># =&gt; 6
+</span>    
+    <span class="c1"># function that has more than 1 class
+</span>    <span class="k">def</span> <span class="nf">create_adder</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+        <span class="k">def</span> <span class="nf">adder</span><span class="p">(</span><span class="n">y</span><span class="p">):</span>
+            <span class="k">return</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span>
+    
+        <span class="k">return</span> <span class="n">adder</span>
+    
+    <span class="n">add_10</span> <span class="o">=</span> <span class="nf">create_adder</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+    <span class="nf">add_10</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>  <span class="c1"># =&gt; 13
+</span></code></pre></div></div> <h3 id="lambda-expression">Lambda expression</h3> <p>Lambda expression is anonymous function, a function that has no name.</p> <p>For usage, lambda expression can set up a ‘abbreviate function’.</p> <p>format: lambda parameter: expression</p> <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">&gt;</span><span class="mi">2</span><span class="p">)(</span><span class="mi">3</span><span class="p">)</span>    <span class="c1"># =&gt; True
+</span>    <span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="n">x</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">+</span> <span class="n">y</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>    <span class="c1"># =&gt;5
+</span>
+    <span class="nf">list</span><span class="p">(</span><span class="nf">filter</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span><span class="n">x</span><span class="o">&gt;</span><span class="mi">5</span><span class="p">,</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">]))</span>  <span class="c1">#=&gt; [6,7]
+</span>    <span class="nf">list</span><span class="p">(</span><span class="nf">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">+</span><span class="mi">10</span><span class="p">,</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]))</span> <span class="c1">#=&gt; [11, 12, 13]
+</span></code></pre></div></div> <h3 id="modules">Modules</h3> <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="kn">import</span> <span class="n">math</span>
+    <span class="nf">print</span><span class="p">(</span><span class="n">math</span><span class="p">.</span><span class="nf">sqrt</span><span class="p">(</span><span class="mi">16</span><span class="p">))</span>
+    
+    <span class="kn">from</span> <span class="n">math</span> <span class="kn">import</span> <span class="n">ceil</span>
+    <span class="nf">print</span><span class="p">(</span><span class="nf">ceil</span><span class="p">(</span><span class="mf">3.7</span><span class="p">))</span>
+
+    <span class="kn">import</span> <span class="n">math</span> <span class="k">as</span> <span class="n">m</span>
+    <span class="nf">print</span><span class="p">(</span><span class="n">m</span><span class="p">.</span><span class="nf">sqrt</span><span class="p">(</span><span class="mi">16</span><span class="p">))</span>
+
+    <span class="nf">dir</span><span class="p">(</span><span class="n">math</span><span class="p">)</span> <span class="c1"># find out which functions and atrributes are defined in a module
+</span></code></pre></div></div> <h2 id="classes">Classes</h2> <h3 id="example-from-lxym">Example from LXYM</h3> <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="c1"># an example of class below
+</span>    <span class="k">class</span> <span class="nc">Human</span><span class="p">:</span>
+        <span class="c1"># A class attribute. It is shared by all instances of this class
+</span>        <span class="n">species</span> <span class="o">=</span> <span class="sh">"</span><span class="s">H. sapiens</span><span class="sh">"</span>
+    
+        <span class="c1"># Basic initializer, called when this class is instantiated.
+</span>        <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
+            <span class="c1"># Assign the argument to the instance's name attribute
+</span>            <span class="n">self</span><span class="p">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+    
+            <span class="c1"># Initialize property
+</span>            <span class="n">self</span><span class="p">.</span><span class="n">age</span> <span class="o">=</span> <span class="mi">0</span>
+    
+        <span class="c1"># All methods take "self" as the first argument
+</span>        <span class="k">def</span> <span class="nf">say</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">msg</span><span class="p">):</span>
+            <span class="k">return</span> <span class="sh">"</span><span class="s">{0}: {1}</span><span class="sh">"</span><span class="p">.</span><span class="nf">format</span><span class="p">(</span><span class="n">self</span><span class="p">.</span><span class="n">name</span><span class="p">,</span> <span class="n">msg</span><span class="p">)</span>
+    
+        <span class="c1"># A class method is shared among all instances
+</span>        <span class="c1"># They are called with the calling class as the first argument
+</span>        <span class="nd">@classmethod</span>
+        <span class="k">def</span> <span class="nf">get_species</span><span class="p">(</span><span class="n">cls</span><span class="p">):</span>
+            <span class="k">return</span> <span class="n">cls</span><span class="p">.</span><span class="n">species</span>
+    
+        <span class="c1"># A static method is called without a class or instance reference
+</span>        <span class="nd">@staticmethod</span>
+        <span class="k">def</span> <span class="nf">grunt</span><span class="p">():</span>
+            <span class="k">return</span> <span class="sh">"</span><span class="s">*grunt*</span><span class="sh">"</span>
+    
+        <span class="c1"># A property is just like a getter.
+</span>        <span class="c1"># It turns the method age() into an read-only attribute
+</span>        <span class="c1"># setter and deleter is defined based on this
+</span>        <span class="nd">@property</span>
+        <span class="k">def</span> <span class="nf">age</span><span class="p">(</span><span class="n">self</span><span class="p">):</span>
+            <span class="k">return</span> <span class="n">self</span><span class="p">.</span><span class="n">_age</span>
+    
+        <span class="c1"># This allows the property to be set,
+</span>        <span class="nd">@age.setter</span>
+        <span class="k">def</span> <span class="nf">age</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">age</span><span class="p">):</span>
+            <span class="n">self</span><span class="p">.</span><span class="n">_age</span> <span class="o">=</span> <span class="n">age</span>
+    
+        <span class="c1"># This allows the property to be deleted
+</span>        <span class="nd">@age.deleter</span>
+        <span class="k">def</span> <span class="nf">age</span><span class="p">(</span><span class="n">self</span><span class="p">):</span>
+            <span class="k">del</span> <span class="n">self</span><span class="p">.</span><span class="n">_age</span>
+
+
+    <span class="c1"># Instantiate a class
+</span>    <span class="n">i</span> <span class="o">=</span> <span class="nc">Human</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="sh">"</span><span class="s">Ian</span><span class="sh">"</span><span class="p">)</span>
+    <span class="k">print</span> <span class="n">i</span><span class="p">.</span><span class="nf">say</span><span class="p">(</span><span class="sh">"</span><span class="s">hi</span><span class="sh">"</span><span class="p">)</span>  <span class="c1"># prints out "Ian: hi"
+</span>    
+    <span class="n">j</span> <span class="o">=</span> <span class="nc">Human</span><span class="p">(</span><span class="sh">"</span><span class="s">Joel</span><span class="sh">"</span><span class="p">)</span>
+    <span class="k">print</span> <span class="n">j</span><span class="p">.</span><span class="nf">say</span><span class="p">(</span><span class="sh">"</span><span class="s">hello</span><span class="sh">"</span><span class="p">)</span>  <span class="c1"># prints out "Joel: hello"
+</span>    
+    <span class="c1"># Call our class method
+</span>    <span class="n">i</span><span class="p">.</span><span class="nf">get_species</span><span class="p">()</span>  <span class="c1"># =&gt; "H. sapiens"
+</span>    
+    <span class="c1"># Change the shared attribute
+</span>    <span class="n">Human</span><span class="p">.</span><span class="n">species</span> <span class="o">=</span> <span class="sh">"</span><span class="s">H. neanderthalensis</span><span class="sh">"</span>
+    <span class="n">i</span><span class="p">.</span><span class="nf">get_species</span><span class="p">()</span>  <span class="c1"># =&gt; "H. neanderthalensis"
+</span>    <span class="n">j</span><span class="p">.</span><span class="nf">get_species</span><span class="p">()</span>  <span class="c1"># =&gt; "H. neanderthalensis"
+</span>    
+    <span class="c1"># Call the static method
+</span>    <span class="n">Human</span><span class="p">.</span><span class="nf">grunt</span><span class="p">()</span>  <span class="c1"># =&gt; "*grunt*"
+</span>    
+    <span class="c1"># Update the property
+</span>    <span class="n">i</span><span class="p">.</span><span class="n">age</span> <span class="o">=</span> <span class="mi">42</span>
+    
+    <span class="c1"># Get the property
+</span>    <span class="n">i</span><span class="p">.</span><span class="n">age</span>  <span class="c1"># =&gt; 42
+</span>    
+    <span class="c1"># Delete the property
+</span>    <span class="k">del</span> <span class="n">i</span><span class="p">.</span><span class="n">age</span>
+    <span class="n">i</span><span class="p">.</span><span class="n">age</span>  <span class="c1"># =&gt; raises an AttributeError
+</span></code></pre></div></div> <h3 id="example-from-stanford">Example from Stanford</h3> <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="k">class</span> <span class="nc">Greeter</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    
+        <span class="c1"># Constructor
+</span>        <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
+            <span class="n">self</span><span class="p">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>  <span class="c1"># Create an instance variable
+</span>    
+        <span class="c1"># Instance method
+</span>        <span class="k">def</span> <span class="nf">greet</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">loud</span><span class="o">=</span><span class="bp">False</span><span class="p">):</span>
+            <span class="k">if</span> <span class="n">loud</span><span class="p">:</span>
+                <span class="nf">print</span><span class="p">(</span><span class="sh">'</span><span class="s">HELLO, %s!</span><span class="sh">'</span> <span class="o">%</span> <span class="n">self</span><span class="p">.</span><span class="n">name</span><span class="p">.</span><span class="nf">upper</span><span class="p">())</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="nf">print</span><span class="p">(</span><span class="sh">'</span><span class="s">Hello, %s</span><span class="sh">'</span> <span class="o">%</span> <span class="n">self</span><span class="p">.</span><span class="n">name</span><span class="p">)</span>
+    
+    <span class="n">g</span> <span class="o">=</span> <span class="nc">Greeter</span><span class="p">(</span><span class="sh">'</span><span class="s">Fred</span><span class="sh">'</span><span class="p">)</span>  <span class="c1"># Construct an instance of the Greeter class
+</span>    <span class="n">g</span><span class="p">.</span><span class="nf">greet</span><span class="p">()</span>            <span class="c1"># Call an instance method; prints "Hello, Fred"
+</span>    <span class="n">g</span><span class="p">.</span><span class="nf">greet</span><span class="p">(</span><span class="n">loud</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>   <span class="c1"># Call an instance method; prints "HELLO, FRED!"
+</span>    
+    <span class="c1"># g equals to self in Greeter __init__ , and when define a class variate, __init__ will be called automatically
+</span></code></pre></div></div> <h1 id="numpy">Numpy</h1> <h2 id="creat-numpy">creat numpy</h2> <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="kn">import</span> <span class="n">numpy</span> <span class="k">as</span> <span class="n">py</span>
+    <span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="nf">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">])</span>
+    <span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="nf">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">],</span> <span class="n">dtype</span> <span class="o">=</span> <span class="nb">float</span><span class="p">)</span>      <span class="c1"># define data type;
+</span>    <span class="c1"># check datatype by a.dtype
+</span>    <span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="nf">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">],[</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">]])</span>
+    <span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="nf">full</span><span class="p">((</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">),</span><span class="mi">0</span><span class="p">)</span>           <span class="c1">#= [[0, 0, 0],[0, 0, 0]]
+</span>    <span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="nf">eye</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>                  <span class="c1">#= [[1,0],[0,1]]  identity matrix of rank 2
+</span>    <span class="n">c</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="nf">arange</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>               <span class="c1">#= [0, 1, 2, 3]
+</span>    
+    <span class="n">b</span> <span class="o">=</span> <span class="n">a</span> <span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">:</span><span class="mi">3</span><span class="p">]</span>        <span class="c1"># b is subarray of a, modifying b will change a alsop
+</span>    <span class="n">b</span> <span class="o">=</span> <span class="n">a</span> <span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">]</span>           <span class="c1"># same as previous line but b will be rank 1
+</span>    
+    <span class="n">b</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="nf">array</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">])</span>
+    <span class="n">c</span> <span class="o">=</span> <span class="n">a</span> <span class="p">[</span><span class="n">np</span><span class="p">.</span><span class="nf">arange</span><span class="p">(</span><span class="mi">4</span><span class="p">),</span> <span class="n">b</span><span class="p">]</span>     <span class="c1"># combine 2 array to indexing
+</span>    
+    <span class="c1">#boolean array indexing
+</span>    
+    <span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="nf">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">]])</span>
+    
+    <span class="n">bool_idx</span> <span class="o">=</span> <span class="p">(</span><span class="n">a</span> <span class="o">&gt;</span> <span class="mi">2</span><span class="p">)</span>
+    
+    <span class="k">print</span> <span class="n">bool_idx</span>      <span class="c1"># Prints "[[False False]
+</span>                         <span class="c1">#          [ True  True]
+</span>                         <span class="c1">#          [ True  True]]"
+</span>    <span class="k">print</span> <span class="n">a</span><span class="p">[</span><span class="n">bool_idx</span><span class="p">]</span>    <span class="c1">#          [3 4 5 6]   use boolean array indexing to construct a rank 1 array
+</span>    <span class="k">print</span> <span class="n">a</span><span class="p">[(</span><span class="n">a</span><span class="o">&gt;</span><span class="mi">2</span><span class="p">)]</span>       <span class="c1">#equal
+</span></code></pre></div></div> <h2 id="array-math">Array math</h2> <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="kn">import</span> <span class="n">numpy</span> <span class="k">as</span> <span class="n">np</span>
+    
+    <span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="nf">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">],[</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">],</span> <span class="n">dtype</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">float64</span><span class="p">)</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="nf">empty_like</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>                           <span class="c1"># copy
+</span>    <span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="nf">array</span><span class="p">([</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">],[</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">],</span> <span class="n">dtype</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">float64</span><span class="p">)</span>
+    
+    <span class="k">print</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span>          <span class="c1"># elementwise operation
+</span>    <span class="k">print</span> <span class="n">np</span><span class="p">.</span><span class="nf">add</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span>    <span class="c1"># elementwise also
+</span>    
+    <span class="k">print</span> <span class="n">x</span> <span class="o">-</span> <span class="n">y</span>
+    <span class="k">print</span> <span class="n">np</span><span class="p">.</span><span class="nf">subtract</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span>
+    
+    <span class="k">print</span> <span class="n">x</span> <span class="o">*</span> <span class="n">y</span>
+    <span class="k">print</span> <span class="n">np</span><span class="p">.</span><span class="nf">multiply</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span>
+    
+    <span class="k">print</span> <span class="n">x</span><span class="o">/</span><span class="n">y</span>
+    <span class="k">print</span> <span class="n">np</span><span class="p">.</span><span class="nf">divide</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span>
+    
+    <span class="k">print</span> <span class="n">np</span><span class="p">.</span><span class="nf">sqrt</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+    
+    <span class="sh">"""</span><span class="s">
+    matrix operation below
+    </span><span class="sh">"""</span>
+    
+    <span class="n">v</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="nf">array</span><span class="p">([</span><span class="mi">9</span><span class="p">,</span><span class="mi">10</span><span class="p">])</span>
+    <span class="n">w</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="nf">array</span><span class="p">([</span><span class="mi">11</span><span class="p">,</span><span class="mi">12</span><span class="p">])</span>
+    
+    <span class="k">print</span> <span class="n">np</span><span class="p">.</span><span class="nf">dot</span><span class="p">(</span><span class="n">v</span><span class="p">,</span><span class="n">w</span><span class="p">)</span>    <span class="c1">#inner product
+</span>    <span class="k">print</span> <span class="n">np</span><span class="p">.</span><span class="nf">dot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">v</span><span class="p">)</span>    <span class="c1">#
+</span>    
+    <span class="k">print</span> <span class="n">x</span><span class="p">.</span><span class="n">T</span>            <span class="c1"># transpose x
+</span>    <span class="sh">"""</span><span class="s">
+    other operations
+    </span><span class="sh">"""</span>
+    <span class="k">print</span> <span class="n">np</span><span class="p">.</span><span class="nf">sum</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>      <span class="c1"># sum of all elements
+</span>    <span class="k">print</span> <span class="n">np</span><span class="p">.</span><span class="nf">sum</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">axis</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span>
+    <span class="k">print</span> <span class="n">np</span><span class="p">.</span><span class="nf">sum</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">axis</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span>
+    
+    <span class="n">v</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="nf">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
+    <span class="n">vv</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="nf">reshape</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>      <span class="c1">#reshape: number of elements must be the same
+</span>    
+    <span class="n">v</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="mi">10</span>
+    <span class="k">print</span> <span class="n">v</span><span class="p">,</span> <span class="n">vv</span>                     <span class="c1">#vv will change also
+</span></code></pre></div></div> <h2 id="broadcasting">Broadcasting</h2> <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="nf">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">],</span> <span class="p">[</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">9</span><span class="p">],</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">12</span><span class="p">]])</span>
+    <span class="n">v</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="nf">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="nf">empty_like</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>   <span class="c1"># Create an empty matrix with the same shape as x
+</span>    
+    <span class="n">vv</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="nf">tile</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>    <span class="c1"># stack 4 copire of v on top of each other
+</span>                               <span class="c1"># (4,2) means stack 4 matrixs consisting of 2 copies of v
+</span>    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nf">range</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+        <span class="n">y</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="p">:]</span> <span class="o">=</span> <span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="p">:]</span> <span class="o">+</span> <span class="n">v</span>
+    <span class="c1">#equals to y = x + vv
+</span>    <span class="c1">#equals to y = x + v
+</span>    
+    <span class="c1">#broadcast: change the matrix that has lower rank, to make the operation available
+</span>    <span class="n">v</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="nf">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
+    <span class="n">w</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="nf">array</span><span class="p">([</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">])</span>
+    <span class="k">print</span> <span class="n">np</span><span class="p">.</span><span class="nf">reshape</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span><span class="o">*</span><span class="n">w</span>
+</code></pre></div></div> </div> </article> <br> <hr> <br> <ul class="list-disc pl-8"></ul> <h2 class="text-3xl font-semibold mb-4 mt-12">Enjoy Reading This Article?</h2> <p class="mb-2">Here are some more articles you might like to read next:</p> <li class="my-2"> <a class="text-pink-700 underline font-semibold hover:text-pink-800" href="/blog/2023/LargeMatrix/">Write Summation as Matrix</a> </li> <li class="my-2"> <a class="text-pink-700 underline font-semibold hover:text-pink-800" href="/blog/2023/InverseKinematics/">Inverse Kinematics</a> </li> <li class="my-2"> <a class="text-pink-700 underline font-semibold hover:text-pink-800" href="/blog/2023/Rotation/">Representations of Rotation and Derivation</a> </li> <li class="my-2"> <a class="text-pink-700 underline font-semibold hover:text-pink-800" href="/blog/2021/SSH-test/">Assembly Language and Language C</a> </li> <li class="my-2"> <a class="text-pink-700 underline font-semibold hover:text-pink-800" href="/blog/2021/Pointers-in-Cpp/">Note: Pointer in C++</a> </li> </div> </div> <footer class="fixed-bottom" role="contentinfo"> <div class="container mt-0"> © Copyright 2026 Yuhan Wu. </div> </footer> <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script> <script src="/assets/js/bootstrap.bundle.min.js"></script> <script src="https://cdn.jsdelivr.net/npm/mdbootstrap@4.20.0/js/mdb.min.js" integrity="sha256-NdbiivsvWt7VYCt6hYNT3h/th9vSTL4EDWeGs5SN3DA=" crossorigin="anonymous"></script> <script defer src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha256-Nn1q/fx0H7SNLZMQ5Hw5JLaTRZp0yILA/FRexe19VdI=" crossorigin="anonymous"></script> <script defer src="https://cdn.jsdelivr.net/npm/imagesloaded@5.0.0/imagesloaded.pkgd.min.js" integrity="sha256-htrLFfZJ6v5udOG+3kNLINIKh2gvoKqwEhHYfTTMICc=" crossorigin="anonymous"></script> <script defer src="/assets/js/masonry.js?a0db7e5d5c70cc3252b3138b0c91dcaf" type="text/javascript"></script> <script defer src="https://cdn.jsdelivr.net/npm/medium-zoom@1.1.0/dist/medium-zoom.min.js" integrity="sha256-ZgMyDAIYDYGxbcpJcfUnYwNevG/xi9OHKaR/8GK+jWc=" crossorigin="anonymous"></script> <script defer src="/assets/js/zoom.js?85ddb88934d28b74e78031fd54cf8308"></script> <script src="/assets/js/no_defer.js?2781658a0a2b13ed609542042a859126"></script> <script defer src="/assets/js/common.js?e0514a05c5c95ac1a93a8dfd5249b92e"></script> <script defer src="/assets/js/copy_code.js?c8a01c11a92744d44b093fc3bda915df" type="text/javascript"></script> <script defer src="/assets/js/jupyter_new_tab.js?d9f17b6adc2311cbabd747f4538bb15f"></script> <script async src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script> <script async src="https://badge.dimensions.ai/badge.js"></script> <script defer type="text/javascript" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.js" integrity="sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI=" crossorigin="anonymous"></script> <script src="/assets/js/mathjax-setup.js?a5bb4e6a542c546dd929b24b8b236dfd"></script> <script defer src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6" crossorigin="anonymous"></script> <script defer src="/assets/js/progress-bar.js?2f30e0e6801ea8f5036fa66e1ab0a71a" type="text/javascript"></script> <script src="/assets/js/vanilla-back-to-top.min.js?f40d453793ff4f64e238e420181a1d17"></script> <script>
+    addBackToTop();
+  </script> <script type="module" src="/assets/js/search/ninja-keys.min.js?a3446f084dcaecc5f75aa1757d087dcf"></script> <ninja-keys hidebreadcrumbs noautoloadmdicons placeholder="Type to start searching"></ninja-keys> <script src="/assets/js/search-setup.js?6c304f7b1992d4b60f7a07956e52f04a"></script> <script src="/assets/js/search-data.js"></script> <script src="/assets/js/shortcut-key.js?6f508d74becd347268a7f822bca7309d"></script> </body> </html>

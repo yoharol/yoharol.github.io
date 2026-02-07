@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gowun Batang Font Test</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 40px;
+      line-height: 1.6;
+    }
+
+    .gowun-batang {
+      font-family: 'Gowun Batang', serif;
+    }
+
+    .times-new-roman {
+      font-family: 'Times New Roman', serif;
+    }
+
+    .arial {
+      font-family: Arial, sans-serif;
+    }
+
+    .default-serif {
+      font-family: serif;
+    }
+
+    .test-section {
+      margin: 30px 0;
+      padding: 20px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+    }
+
+    .font-name {
+      color: #666;
+      font-size: 14px;
+      margin-bottom: 10px;
+      font-family: Arial, sans-serif;
+    }
+
+    .sample-text {
+      font-size: 18px;
+      margin-bottom: 15px;
+    }
+
+    .large-text {
+      font-size: 32px;
+      font-weight: bold;
+      margin-bottom: 15px;
+    }
+
+    .korean-text {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Font Test Page</h1>
+  <p>This page tests if the Gowun Batang font is loading and displaying correctly.</p>
+
+  <div class="test-section">
+    <div class="font-name">Font: Gowun Batang</div>
+    <div class="sample-text gowun-batang">The quick brown fox jumps over the lazy dog.</div>
+    <div class="large-text gowun-batang">Gowun Batang Large Text</div>
+    <div class="korean-text gowun-batang">고운바탕 한글 텍스트 (Korean text sample)</div>
+    <p class="gowun-batang">
+      This is a longer paragraph to test how the Gowun Batang font looks in paragraph form.
+      Gowun Batang is a Korean serif font that should display beautifully for both English
+      and Korean characters. If this font is loading correctly, you should see a distinctive
+      serif typeface that's different from the default system fonts.
+    </p>
+  </div>
+
+  <div class="test-section">
+    <div class="font-name">Font: Times New Roman (for comparison)</div>
+    <div class="sample-text times-new-roman">The quick brown fox jumps over the lazy dog.</div>
+    <div class="large-text times-new-roman">Times New Roman Large Text</div>
+    <p class="times-new-roman">
+      This paragraph uses Times New Roman font as a comparison. You should be able to
+      see clear differences between this and the Gowun Batang font above.
+    </p>
+  </div>
+
+  <div class="test-section">
+    <div class="font-name">Font: Arial (for comparison)</div>
+    <div class="sample-text arial">The quick brown fox jumps over the lazy dog.</div>
+    <div class="large-text arial">Arial Large Text</div>
+    <p class="arial">
+      This paragraph uses Arial font as a sans-serif comparison. Notice how different
+      this looks from the serif fonts above.
+    </p>
+  </div>
+
+  <div class="test-section">
+    <div class="font-name">Font: Default System Serif</div>
+    <div class="sample-text default-serif">The quick brown fox jumps over the lazy dog.</div>
+    <div class="large-text default-serif">Default Serif Large Text</div>
+    <p class="default-serif">
+      This paragraph uses the default system serif font. If Gowun Batang is not loading,
+      the first section should look similar to this one.
+    </p>
+  </div>
+
+  <hr>
+
+  <h2>How to Check if Gowun Batang is Working:</h2>
+  <ol>
+    <li><strong>Visual Comparison:</strong> Compare the first section (Gowun Batang) with the last section (Default
+      Serif). They should look different if the Google Font is loading.</li>
+    <li><strong>Korean Characters:</strong> The Korean text should display properly if Gowun Batang is loaded.</li>
+    <li><strong>Developer Tools:</strong>
+      <ul>
+        <li>Right-click on any Gowun Batang text and select "Inspect"</li>
+        <li>In the Computed tab, look for "font-family"</li>
+        <li>It should show "Gowun Batang" as the computed font</li>
+      </ul>
+    </li>
+    <li><strong>Network Tab:</strong>
+      <ul>
+        <li>Open Developer Tools → Network tab</li>
+        <li>Refresh the page</li>
+        <li>Filter by "Font" - you should see font files being downloaded from Google Fonts</li>
+      </ul>
+    </li>
+  </ol>
+
+  <script>
+    // JavaScript to check if the font is loaded
+    document.fonts.ready.then(function () {
+      const fontCheckResult = document.fonts.check('16px "Gowun Batang"');
+      console.log('Gowun Batang font loaded:', fontCheckResult);
+
+      // Add a visual indicator
+      const indicator = document.createElement('div');
+      indicator.style.cssText = `
+                position: fixed;
+                top: 10px;
+                right: 10px;
+                padding: 10px;
+                background: ${fontCheckResult ? 'green' : 'red'};
+                color: white;
+                border-radius: 5px;
+                z-index: 1000;
+                font-family: Arial, sans-serif;
+                font-size: 14px;
+            `;
+      indicator.textContent = fontCheckResult ? 'Gowun Batang: ✓ Loaded' : 'Gowun Batang: ✗ Not Loaded';
+      document.body.appendChild(indicator);
+    });
+  </script>
+</body>
+
+</html>
