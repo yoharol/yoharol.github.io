@@ -1,0 +1,83 @@
+/*******************************************************************************
+ * Variables used throughout the theme.
+ * To adjust anything, simply edit the variables below and rebuild the theme.
+ ******************************************************************************/
+
+@use "sass:color";
+
+// Colors
+$red-color: #ff3636 !default;
+$red-color-dark: #b71c1c !default;
+$orange-color: #f29105 !default;
+$blue-color: #0076df !default;
+$blue-color-dark: #00369f !default;
+$cyan-color: #2698ba !default;
+$light-cyan-color: color.adjust($cyan-color, $lightness: 25%);
+$green-color: #00ab37 !default;
+$green-color-lime: #b7d12a !default;
+$green-color-dark: #009f06 !default;
+$green-color-light: #ddffdd !default;
+$green-color-bright: #11d68b !default;
+$purple-color: #b509ac !default;
+$light-purple-color: color.adjust($purple-color, $lightness: 25%);
+$pink-color: #f92080 !default;
+$pink-color-light: #ffdddd !default;
+$yellow-color: #efcc00 !default;
+
+$grey-color: #828282 !default;
+$grey-color-light: color.adjust($grey-color, $lightness: 40%);
+$grey-color-dark: #1c1c1d;
+$grey-900: #212529;
+
+$white-color: #ffffff !default;
+$black-color: #000000 !default;
+
+// Theme colors
+
+$code-bg-color-light: rgba($purple-color, 0.05);
+$code-bg-color-dark: #2c3237 !default;
+
+// Font awesome location
+$fa-font-path: "../webfonts";
+
+// Tabler icons location
+$ti-font-path: "../fonts";
+
+// Back To Top button config
+$back-to-top-z-index: 10;
+$back-to-top-bottom: 30px;
+$back-to-top-right: 30px;
+$back-to-top-diameter: 40px;
+$back-to-top-height: $back-to-top-diameter;
+$back-to-top-width: $back-to-top-diameter;
+
+
+/* Font Families */
+$serif-font-family: "Gowun Batang", serif !default;
+$sans-serif-font-family: "Times New Roman", serif !default;
+$monospace-font-family: Menlo,
+  Consolas,
+  Monaco,
+  "Courier New",
+  Courier,
+  monospace !default;
+
+$font-family-base: $sans-serif-font-family !default;
+$heading-font-family: $serif-font-family !default;
+
+
+$page-title-weight: bold !default;
+$entry-title-weight: bold !default;
+
+$h1-font-size: 3.0rem;
+$h2-font-size: 2.4rem;
+$h3-font-size: 2.0rem;
+$h4-font-size: 1.75rem;
+$h5-font-size: 1.5rem;
+$h6-font-size: 1.25rem;
+
+$text-font-size: 1.1rem;
+
+$post-header-size: 2.5rem;
+$post-description-size: 1.2rem;
+$post-meta-size: 0.95rem;

@@ -14,7 +14,7 @@ official tutorial: <http://home.fnal.gov/~neilsen/notebook/orgExamples/org-examp
 tutorial on CSDN:<http://www.cnblogs.com/qlwy/archive/2012/06/15/2551034.html> 
 
 
-{% include toc %}
+{% toc %}
 
 
 <a id="org3891fa2"></a>

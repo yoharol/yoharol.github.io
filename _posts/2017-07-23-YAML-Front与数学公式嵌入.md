@@ -8,7 +8,7 @@ mathjax: true
 
 在博客中编辑格式，以及图片方式嵌入latex数学公式的方法
 
-{% include toc %}
+{% toc %}
 
 ## YAML Front
 
@@ -21,7 +21,7 @@ YAML作为.md文件开头的页面设置脚本，一般格式为：
 
 当需要加入table of content时，插入以下语句：
 ```
-{% include toc %}
+{% toc %}
 ```
 
 还有其他设置，目前实用的是如上几个，其中tags后面跟着tag列表.  

@@ -7,7 +7,7 @@ title: "Note: Python Basics"
 
 备忘录性质python笔记，主要来源于网站Learn X in Y minute, [link](https://learnxinyminutes.com/docs/python/).
 
-{% include toc %}
+{% toc %}
 
 # Python Basic
 

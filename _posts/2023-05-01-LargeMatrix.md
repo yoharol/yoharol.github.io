@@ -6,6 +6,7 @@ categories: research
 mathjax: true
 ---
 
+
 It is hard to understand complex computation with summation of numerous symbols. Writing a linear system in matrix form can greatly help to get a high level perspective. However, building a matrix form can be brain burning. 
 
 It is hard to clearify a general method for such formula conversion. In this blog I record some specific cases to remind myself what is the common routine and useful toolbox. 
