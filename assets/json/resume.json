@@ -72,44 +72,6 @@
       ]
     }
   ],
-  "projects": [
-    {
-      "name": "ArmorerPhys",
-      "summary": "My own C++ research framework integrating Eigen3, GLFW, libigl, imgui and so on. I aim at building a research framework that is self-contained, flexible and data-oriented.",
-      "url": "https://github.com/yoharol/ArmorerPhys",
-      "label": "github"
-    },
-    {
-      "name": "StochasticWarp",
-      "summary": "An implementation of Stochastic Computation of Barycentric Coordinates (SIGGRAPH 2023) in a maya C++ plugin. It computes harmonic coordinates by walk-on-sphere method with parallelization.",
-      "url": "https://github.com/yoharol/StochasticWarp",
-      "label": "github"
-    },
-    {
-      "name": "Mesh Physics in Spine-Runtim",
-      "summary": "The implementation of my research two-way coupling of skinning transformations and pbd in spine-rumtime framework. This is an official collaboration with Ecosteric Software.",
-      "url": "https://github.com/yoharol/spine-runtimes-compdyn/tree/4.1/spine-libgdx/mesh_physics",
-      "label": "github"
-    },
-    {
-      "name": "High performance PBFluids",
-      "summary": "Single-file implementation of position-based fluids. Four cpp files for four versions: baseline, single-thread SIMD, multi-thread SIMD, CUDA.",
-      "url": "https://github.com/yoharol/High_Performance_PBD_Fluids",
-      "label": "github"
-    }
-  ],
-  "awards": [
-    {
-      "title": "Adopting Sustainable Partnerships for Innovative Research Ecosystem (ASPIRE)",
-      "date": "2025-2026",
-      "url": "https://www.jst.go.jp/aspire/en/about_en.html"
-    },
-    {
-      "title": "Spring GX Student Scholarship",
-      "date": "2024-2027",
-      "url": "https://spring-gx.adm.s.u-tokyo.ac.jp/en/"
-    }
-  ],
   "education": [
     {
       "institution": "The University of Tokyo",
@@ -151,6 +113,44 @@
       "studyType": "Bachelor",
       "startDate": "2017",
       "endDate": "2020"
+    }
+  ],
+  "projects": [
+    {
+      "name": "ArmorerPhys",
+      "summary": "My own C++ research framework integrating Eigen3, GLFW, libigl, imgui and so on. I aim at building a research framework that is self-contained, flexible and data-oriented.",
+      "url": "https://github.com/yoharol/ArmorerPhys",
+      "label": "github"
+    },
+    {
+      "name": "StochasticWarp",
+      "summary": "An implementation of Stochastic Computation of Barycentric Coordinates (SIGGRAPH 2023) in a maya C++ plugin. It computes harmonic coordinates by walk-on-sphere method with parallelization.",
+      "url": "https://github.com/yoharol/StochasticWarp",
+      "label": "github"
+    },
+    {
+      "name": "Mesh Physics in Spine-Runtim",
+      "summary": "The implementation of my research two-way coupling of skinning transformations and pbd in spine-rumtime framework. This is an official collaboration with Ecosteric Software.",
+      "url": "https://github.com/yoharol/spine-runtimes-compdyn/tree/4.1/spine-libgdx/mesh_physics",
+      "label": "github"
+    },
+    {
+      "name": "High performance PBFluids",
+      "summary": "Single-file implementation of position-based fluids. Four cpp files for four versions: baseline, single-thread SIMD, multi-thread SIMD, CUDA.",
+      "url": "https://github.com/yoharol/High_Performance_PBD_Fluids",
+      "label": "github"
+    }
+  ],
+  "awards": [
+    {
+      "title": "Adopting Sustainable Partnerships for Innovative Research Ecosystem (ASPIRE)",
+      "date": "2025-2026",
+      "url": "https://www.jst.go.jp/aspire/en/about_en.html"
+    },
+    {
+      "title": "Spring GX Student Scholarship",
+      "date": "2024-2027",
+      "url": "https://spring-gx.adm.s.u-tokyo.ac.jp/en/"
     }
   ],
   "skills": [
