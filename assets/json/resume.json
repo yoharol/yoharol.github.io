@@ -16,22 +16,32 @@
   },
   "publications": [
     {
+      "name": "M.I.O: Towards Interactive Intelligence for Digital Humans",
+      "publisher": "Technical Report, Shanda AI",
+      "url": "https://shandaai.github.io/project_mio_page/",
+      "releaseDate": "2025",
+      "summary": "Yiyi Cai, Xuangeng Chu, Xiwei Gao, <b>Yuhan Wu</b>, and collaborators."
+    },
+    {
       "name": "FloodDiffusion: Tailored Diffusion Forcing for Streaming Motion Generation",
       "publisher": "Arxiv",
       "url": "https://shandaai.github.io/FloodDiffusion/",
-      "releaseDate": "2025"
+      "releaseDate": "2025",
+      "summary": "Yiyi Cai, <b>Yuhan Wu</b>, and collaborators."
     },
     {
       "name": "BlendSim: Simulation on Parametric Blendshapes using Spacetime Projective Dynamics",
       "publisher": "Computer Graphics Forum (Eurographics 2025)",
       "url": "/pages/blendsim",
-      "releaseDate": "2025"
+      "releaseDate": "2025",
+      "summary": "<b>Yuhan Wu</b>, Nobuyuki Umetani."
     },
     {
       "name": "Two-Way Coupling of Skinning Transformations and Position Based Dynamics",
       "publisher": "Proceedings of the ACM on Computer Graphics and Interactive Techniques (SCA 2023)",
       "url": "/pages/control_pbd",
-      "releaseDate": "2023"
+      "releaseDate": "2023",
+      "summary": "<b>Yuhan Wu</b>, Nobuyuki Umetani."
     }
   ],
   "work": [

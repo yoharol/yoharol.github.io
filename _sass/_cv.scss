@@ -146,6 +146,12 @@ p.list-group-time {
   padding-left: 0.5rem;
 }
 
+.publication-summary b,
+.publication-summary strong {
+  font-weight: 800;
+  color: var(--global-theme-color);
+}
+
 td.list-group-link {
   padding-left: 0.5rem;
 }
