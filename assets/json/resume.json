@@ -20,7 +20,7 @@
       "publisher": "Technical Report, Shanda AI",
       "url": "https://shandaai.github.io/project_mio_page/",
       "releaseDate": "2025",
-      "summary": "Yiyi Cai, Xuangeng Chu, Xiwei Gao, <b>Yuhan Wu</b>, and collaborators."
+      "summary": "<b>Yuhan Wu</b>, and collaborators."
     },
     {
       "name": "FloodDiffusion: Tailored Diffusion Forcing for Streaming Motion Generation",
@@ -51,7 +51,7 @@
       "url": "https://jp.shanda.com/",
       "startDate": "2025-07-01",
       "summary": "Working on streaming human motion generation, optimized motion generation and humanoid simulation.",
-      "endDate": "now",
+      "endDate": "2026-03-31",
       "highlights": [
         "Generative human motion",
         "Diffusion models with transformation (DiT)"
